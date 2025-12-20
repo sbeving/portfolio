@@ -1,0 +1,66 @@
+.introduction{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    z-index: 99;
+    background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 50%, #0a0a0a 100%);
+    
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: radial-gradient(circle at 50% 50%, rgba(0, 255, 136, 0.1) 0%, transparent 50%);
+        animation: pulse 3s ease-in-out infinite;
+    }
+    
+    @keyframes pulse {
+        0%, 100% { opacity: 0.5; }
+        50% { opacity: 1; }
+    }
+    svg{
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: calc(100% + 300px);
+        path{
+            fill: #0a0a0a;
+        }
+    }
+    p{
+        display: flex;
+        color: #00ff88;
+        font-size: 48px;
+        align-items: center;
+        position: absolute;
+        z-index: 1;
+        font-family: 'Courier New', monospace;
+        font-weight: 700;
+        letter-spacing: 2px;
+        text-shadow: 0 0 20px rgba(0, 255, 136, 0.8),
+                     0 0 40px rgba(0, 255, 136, 0.5),
+                     0 0 60px rgba(0, 255, 136, 0.3);
+        
+        span{
+            display: block;
+            width: 12px;
+            height: 12px;
+            background: linear-gradient(135deg, #00ff88, #0066ff);
+            border-radius: 50%;
+            margin-right: 15px;
+            box-shadow: 0 0 20px rgba(0, 255, 136, 0.8),
+                        0 0 40px rgba(0, 255, 136, 0.5);
+            animation: blink 1s ease-in-out infinite;
+        }
+        
+        @keyframes blink {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.3; transform: scale(0.8); }
+        }
+    }
+}

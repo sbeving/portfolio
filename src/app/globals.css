@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body{
+    margin: 0px;
+    overflow: hidden; /* Hide scrollbars */
+    cursor: default;
+    background: #0F172A;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    color: #F8FAFC;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Professional color system */
+:root {
+    --primary: #3B82F6;
+    --primary-hover: #60A5FA;
+    --secondary: #06B6D4;
+    --secondary-hover: #22D3EE;
+    --bg-primary: #0F172A;
+    --bg-secondary: #1E293B;
+    --bg-tertiary: #334155;
+    --text-primary: #F8FAFC;
+    --text-secondary: #CBD5E1;
+    --text-muted: #94A3B8;
+    --border-color: rgba(148, 163, 184, 0.2);
+}
+
+/* Clean scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+    background: var(--bg-primary);
+}
+
+::-webkit-scrollbar-track {
+    background: var(--bg-secondary);
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, var(--primary), var(--secondary));
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(180deg, var(--primary-hover), var(--secondary-hover));
+}
+
+/* Professional selection */
+*::selection {
+    background-color: rgba(59, 130, 246, 0.3);
+    color: var(--text-primary);
+}
+
+/* Focus states */
+button:focus-visible,
+a:focus-visible {
+    outline: 2px solid var(--primary);
+    outline-offset: 2px;
+}

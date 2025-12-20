@@ -1,0 +1,128 @@
+.projects{
+    display: flex;
+    align-items: center;
+    padding-left: clamp(30px, 10vw, 150px);
+    padding-right: clamp(30px, 10vw, 150px);
+    flex-direction: column;
+    margin-top: clamp(60px, 12vh, 100px);
+    margin-bottom: clamp(60px, 12vh, 100px);
+    background: linear-gradient(180deg, #334155 0%, #1E293B 50%, #0F172A 100%);
+    padding-top: clamp(60px, 12vh, 100px);
+    padding-bottom: clamp(60px, 12vh, 100px);
+    position: relative;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 1px;
+        background: linear-gradient(90deg, transparent, rgba(148, 163, 184, 0.5), transparent);
+        box-shadow: none;
+    }
+
+    .body{
+        max-width: 1400px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: clamp(60px, 10vh, 100px);
+    }
+    
+    .modalContainer{
+        height: 350px;
+        width: 400px;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        background: linear-gradient(135deg, #1a1a2e, #16213e);
+        pointer-events: none;
+        overflow: hidden;
+        z-index: 3;
+        border-radius: 15px;
+        border: 2px solid rgba(0, 255, 136, 0.3);
+        box-shadow: 0 0 30px rgba(0, 255, 136, 0.4),
+                    0 0 60px rgba(0, 102, 255, 0.2),
+                    inset 0 0 20px rgba(0, 255, 136, 0.1);
+    }
+    
+    .modalSlider{
+        height: 100%;
+        width: 100%;
+        position: relative;
+        transition: top 0.5s cubic-bezier(0.76, 0, 0.24, 1);
+    }
+    
+    .modal{
+        height: 100%;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .modal img{
+        height: auto;
+    }
+    
+    .cursor, .cursorLabel{
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        background-color: #00ff88;
+        color: #0a0a0a;
+        position: fixed;
+        z-index:3;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 14px;
+        font-weight: 700;
+        pointer-events: none;
+        box-shadow: 0 0 20px rgba(0, 255, 136, 0.6),
+                    0 0 40px rgba(0, 255, 136, 0.4);
+        font-family: 'Courier New', monospace;
+    }
+    
+    .cursorLabel{
+        background-color: transparent;
+        color: #00ff88;
+        text-shadow: 0 0 5px #00ff88;
+    }
+    
+    @media (max-width: 1024px) {
+        padding-left: 40px;
+        padding-right: 40px;
+        padding-top: 70px;
+        padding-bottom: 70px;
+        margin-top: 70px;
+        
+        .modalContainer {
+            height: 300px;
+            width: 350px;
+        }
+        
+        .cursor, .cursorLabel {
+            width: 70px;
+            height: 70px;
+            font-size: 12px;
+        }
+    }
+    
+    @media (max-width: 768px) {
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-top: 50px;
+        padding-bottom: 50px;
+        margin-top: 50px;
+        
+        .modalContainer {
+            height: 250px;
+            width: 300px;
+        }
+    }
+}
+

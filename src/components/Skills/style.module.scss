@@ -1,0 +1,137 @@
+.skills {
+  padding: 100px 0;
+  background: linear-gradient(180deg, #0a0a0a 0%, #1a1a2e 100%);
+  
+  .body {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 50px;
+  }
+
+  h2 {
+    font-size: 3rem;
+    color: #00ff88;
+    margin-bottom: 50px;
+    font-weight: 600;
+    text-align: center;
+  }
+
+  .achievementsSection {
+    margin-bottom: 100px;
+  }
+
+  .achievementsGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+  }
+
+  .achievementCard {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 30px;
+    border-radius: 15px;
+    border: 2px solid rgba(0, 255, 136, 0.2);
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+
+    &:hover {
+      transform: translateY(-10px);
+      border-color: rgba(0, 255, 136, 0.6);
+      box-shadow: 0 10px 30px rgba(0, 255, 136, 0.3);
+    }
+
+    h3 {
+      font-size: 2rem;
+      color: #00ff88;
+      margin: 0 0 10px 0;
+      font-weight: 700;
+    }
+
+    p {
+      color: rgba(255, 255, 255, 0.8);
+      margin: 0;
+      font-size: 1rem;
+      line-height: 1.5;
+    }
+  }
+
+  .skillsSection {
+    margin-top: 50px;
+  }
+
+  .skillsGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+  }
+
+  .skillCard {
+    background: rgba(255, 255, 255, 0.03);
+    padding: 35px;
+    border-radius: 15px;
+    border: 2px solid rgba(0, 102, 255, 0.2);
+    transition: all 0.3s ease;
+
+    &:hover {
+      border-color: rgba(0, 102, 255, 0.5);
+      background: rgba(255, 255, 255, 0.05);
+    }
+
+    h3 {
+      font-size: 1.5rem;
+      color: #0066ff;
+      margin: 0 0 20px 0;
+      font-weight: 600;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+
+      li {
+        color: rgba(255, 255, 255, 0.7);
+        margin-bottom: 12px;
+        padding-left: 20px;
+        position: relative;
+        font-size: 0.95rem;
+
+        &:before {
+          content: "▹";
+          position: absolute;
+          left: 0;
+          color: #00ff88;
+          font-weight: bold;
+        }
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    padding: 50px 0;
+
+    .body {
+      padding: 0 20px;
+    }
+
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 30px;
+    }
+
+    .achievementsGrid,
+    .skillsGrid {
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+
+    .achievementCard,
+    .skillCard {
+      padding: 20px;
+    }
+  }
+}
