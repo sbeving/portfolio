@@ -10,7 +10,7 @@
 
   h2 {
     font-size: 3rem;
-    color: #00ff88;
+    color: #60A5FA;
     margin-bottom: 50px;
     font-weight: 600;
     text-align: center;
@@ -30,19 +30,19 @@
     background: rgba(255, 255, 255, 0.05);
     padding: 30px;
     border-radius: 15px;
-    border: 2px solid rgba(0, 255, 136, 0.2);
+    border: 2px solid rgba(96, 165, 250, 0.2);
     transition: all 0.3s ease;
     backdrop-filter: blur(10px);
 
     &:hover {
       transform: translateY(-10px);
-      border-color: rgba(0, 255, 136, 0.6);
-      box-shadow: 0 10px 30px rgba(0, 255, 136, 0.3);
+      border-color: rgba(96, 165, 250, 0.6);
+      box-shadow: 0 10px 30px rgba(96, 165, 250, 0.3);
     }
 
     h3 {
       font-size: 2rem;
-      color: #00ff88;
+      color: #60A5FA;
       margin: 0 0 10px 0;
       font-weight: 700;
     }
@@ -79,7 +79,7 @@
 
     h3 {
       font-size: 1.5rem;
-      color: #0066ff;
+      color: #3B82F6;
       margin: 0 0 20px 0;
       font-weight: 600;
     }
@@ -100,7 +100,7 @@
           content: "▹";
           position: absolute;
           left: 0;
-          color: #00ff88;
+          color: #60A5FA;
           font-weight: bold;
         }
 
@@ -108,6 +108,27 @@
           margin-bottom: 0;
         }
       }
+    }
+  }
+
+  @media (max-width: 1024px) {
+    padding: 80px 0;
+
+    .body {
+      padding: 0 40px;
+    }
+
+    h2 {
+      font-size: 2.5rem;
+    }
+
+    .achievementsGrid {
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 25px;
+    }
+
+    .skillsGrid {
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     }
   }
 
@@ -132,6 +153,35 @@
     .achievementCard,
     .skillCard {
       padding: 20px;
+    }
+
+    .achievementCard h3 {
+      font-size: 1.5rem;
+    }
+
+    .skillCard h3 {
+      font-size: 1.3rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    padding: 40px 0;
+
+    .body {
+      padding: 0 15px;
+    }
+
+    h2 {
+      font-size: 1.75rem;
+    }
+
+    .achievementCard,
+    .skillCard {
+      padding: 15px;
+    }
+
+    .skillCard ul li {
+      font-size: 0.9rem;
     }
   }
 }

@@ -46,7 +46,7 @@
     }
 
     &:last-of-type{
-        border-bottom: 1px solid rgba(0, 255, 136, 0.2);
+        border-bottom: 1px solid rgba(96, 165, 250, 0.2);
     }
 
     &:hover{
@@ -95,6 +95,18 @@
             h2, p {
                 transform: translateX(0);
             }
+        }
+    }
+    
+    @media (max-width: 480px) {
+        padding: 25px 15px;
+        
+        h2 {
+            font-size: 24px;
+        }
+        
+        p {
+            font-size: 13px;
         }
     }
 }

@@ -43,10 +43,10 @@
         overflow: hidden;
         z-index: 3;
         border-radius: 15px;
-        border: 2px solid rgba(0, 255, 136, 0.3);
-        box-shadow: 0 0 30px rgba(0, 255, 136, 0.4),
-                    0 0 60px rgba(0, 102, 255, 0.2),
-                    inset 0 0 20px rgba(0, 255, 136, 0.1);
+        border: 2px solid rgba(96, 165, 250, 0.3);
+        box-shadow: 0 0 30px rgba(96, 165, 250, 0.4),
+                    0 0 60px rgba(59, 130, 246, 0.2),
+                    inset 0 0 20px rgba(96, 165, 250, 0.1);
     }
     
     .modalSlider{
@@ -72,7 +72,7 @@
         width: 80px;
         height: 80px;
         border-radius: 50%;
-        background-color: #00ff88;
+        background-color: #60A5FA;
         color: #0a0a0a;
         position: fixed;
         z-index:3;
@@ -82,15 +82,15 @@
         font-size: 14px;
         font-weight: 700;
         pointer-events: none;
-        box-shadow: 0 0 20px rgba(0, 255, 136, 0.6),
-                    0 0 40px rgba(0, 255, 136, 0.4);
+        box-shadow: 0 0 20px rgba(96, 165, 250, 0.6),
+                    0 0 40px rgba(96, 165, 250, 0.4);
         font-family: 'Courier New', monospace;
     }
     
     .cursorLabel{
         background-color: transparent;
-        color: #00ff88;
-        text-shadow: 0 0 5px #00ff88;
+        color: #60A5FA;
+        text-shadow: 0 0 5px #60A5FA;
     }
     
     @media (max-width: 1024px) {
@@ -120,8 +120,23 @@
         margin-top: 50px;
         
         .modalContainer {
-            height: 250px;
-            width: 300px;
+            display: none;
+        }
+        
+        .cursor, .cursorLabel {
+            display: none;
+        }
+    }
+    
+    @media (max-width: 480px) {
+        padding-left: 15px;
+        padding-right: 15px;
+        padding-top: 40px;
+        padding-bottom: 40px;
+        margin-top: 40px;
+        
+        .body {
+            margin-bottom: 40px;
         }
     }
 }

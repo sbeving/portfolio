@@ -101,21 +101,49 @@
         right: 50px;
         top: 70%;
         font-size: 16px;
+        max-width: 320px;
+        padding: 20px 24px;
       }
     }
     
     @media (max-width: 768px) {
       .sliderContainer {
-        top: 35%;
+        top: 30%;
       }
       .slider p {
-        font-size: 50px;
+        font-size: clamp(40px, 10vw, 50px);
         letter-spacing: -2px;
+        padding-right: 20px;
       }
       .description {
-        right: 30px;
-        top: 75%;
+        position: relative;
+        top: auto;
+        right: auto;
+        margin: 50vh auto 0;
+        max-width: calc(100% - 40px);
+        width: 90%;
+        padding: 16px 20px;
         font-size: 14px;
+        border-radius: 12px;
+        p {
+          margin-bottom: 8px;
+          line-height: 1.5;
+        }
+        svg {
+          display: none;
+        }
+      }
+    }
+    
+    @media (max-width: 480px) {
+      .slider p {
+        font-size: clamp(32px, 12vw, 42px);
+        letter-spacing: -1px;
+      }
+      .description {
+        margin: 45vh 20px 0;
+        padding: 14px 18px;
+        font-size: 13px;
       }
     }
   }

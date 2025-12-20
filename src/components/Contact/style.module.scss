@@ -7,8 +7,8 @@
     background: linear-gradient(180deg, #0a0a0a 0%, #1a1a2e 50%, #0a0a0a 100%);
     position: relative;
     border-top: 2px solid transparent;
-    border-image: linear-gradient(90deg, #00ff88 0%, #0066ff 100%) 1;
-    box-shadow: 0 -5px 30px rgba(0, 255, 136, 0.2);
+    border-image: linear-gradient(90deg, #60A5FA 0%, #3B82F6 100%) 1;
+    box-shadow: 0 -5px 30px rgba(96, 165, 250, 0.2);
     
     .body{
         padding-top: clamp(80px, 15vh, 150px);
@@ -33,7 +33,7 @@
                     position: relative;
                     border-radius: 50%;
                     overflow: hidden;
-                    border: 2px solid rgba(0, 255, 136, 0.3);
+                    border: 2px solid rgba(96, 165, 250, 0.3);
 
                     img{
                         object-fit: cover;
@@ -131,18 +131,18 @@
                         content: "";
                         width: 0%;
                         height: 2px;
-                        background: linear-gradient(90deg, #00ff88, #0066ff);
+                        background: linear-gradient(90deg, #60A5FA, #3B82F6);
                         display: block;
                         margin-top: 2px;
                         position: relative;
                         left: 50%;
                         transform: translateX(-50%);
                         transition: width 0.3s ease;
-                        box-shadow: 0 0 10px rgba(0, 255, 136, 0.5);
+                        box-shadow: 0 0 10px rgba(96, 165, 250, 0.5);
                     }
                     &:hover{
-                        color: #00ff88;
-                        text-shadow: 0 0 10px rgba(0, 255, 136, 0.5);
+                        color: #60A5FA;
+                        text-shadow: 0 0 10px rgba(96, 165, 250, 0.5);
                         
                         &::after{
                             width: 100%;
@@ -155,7 +155,7 @@
                     gap: 15px;
                 }
                 h3{
-                    color: rgba(0, 255, 136, 0.6);
+                    color: rgba(96, 165, 250, 0.6);
                     cursor: default;
                     font-weight: 400;
                     font-size: 1em;
@@ -241,6 +241,45 @@
                     flex-direction: column;
                     align-items: flex-start;
                 }
+            }
+        }
+    }
+    
+    @media (max-width: 480px) {
+        .body {
+            padding-top: 40px;
+            padding-bottom: 40px;
+            
+            .title {
+                margin-left: 20px;
+                margin-right: 20px;
+                padding-bottom: 40px;
+                
+                h2 {
+                    font-size: 28px;
+                }
+                
+                .button {
+                    width: 120px;
+                    height: 120px;
+                    
+                    p {
+                        font-size: 12px;
+                    }
+                }
+            }
+            
+            .nav {
+                margin-left: 20px;
+                margin-right: 20px;
+                margin-top: 30px;
+            }
+            
+            .info {
+                margin-left: 20px;
+                margin-right: 20px;
+                margin-top: 40px;
+                gap: 30px;
             }
         }
     }
