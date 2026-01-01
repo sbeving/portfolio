@@ -27,7 +27,7 @@ export const metadata = {
     siteName: 'Saleh Eddine Touil Portfolio',
     images: [
       {
-        url: '/images/me.JPG',
+        url: '/images/me.jpg',
         width: 1200,
         height: 630,
         alt: 'Saleh Eddine Touil - Cybersecurity Specialist',
@@ -40,7 +40,7 @@ export const metadata = {
     card: 'summary_large_image',
     title: 'Saleh Eddine Touil | Cybersecurity Specialist & CTF Champion',
     description: 'Elite cybersecurity professional • CTF Champion • Penetration Tester • Full-Stack Developer',
-    images: ['/images/me.JPG'],
+    images: ['/images/me.jpg'],
   },
   robots: {
     index: true,
