@@ -16,7 +16,8 @@ export default function Index() {
 
     useEffect( () => {
       if(isActive) setIsActive(false)
-    }, [pathname, isActive])
+      // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [pathname])
 
     useLayoutEffect( () => {
         gsap.registerPlugin(ScrollTrigger)
@@ -54,14 +55,14 @@ export default function Index() {
                 <div className={`${styles.burger} ${isActive ? styles.burgerActive : ""}`}></div>
             </div>
         </div>
-        {/* Floating button that appears after scrolling */}
+        {/* Floating button that appears bottom right after scrolling 
         <div ref={button} className={styles.headerButtonContainer}>
             <Magnetic>
                 <div onClick={() => setIsActive(!isActive)} className={styles.button}>
                     <div className={`${styles.burger} ${isActive ? styles.burgerActive : ""}`}></div>
                 </div>
             </Magnetic>
-        </div>
+        </div>*/}
         <AnimatePresence mode="wait">
             {isActive && <Nav />}
         </AnimatePresence>
