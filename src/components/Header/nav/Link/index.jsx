@@ -1,9 +1,8 @@
 import styles from './style.module.scss';
-import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { slide, scale } from '../../animation';
 
-export default function Index({data, isActive, setSelectedIndicator}) {
+export default function Index({data, isActive, setSelectedIndicator, onClick}) {
   
     const { title, href, index} = data;
   
@@ -22,7 +21,7 @@ export default function Index({data, isActive, setSelectedIndicator}) {
           animate={isActive ? "open" : "closed"} 
           className={styles.indicator}>
         </motion.div>
-        <Link href={href}>{title}</Link>
+        <span onClick={onClick} style={{ cursor: 'pointer' }}>{title}</span>
       </motion.div>
     )
 }

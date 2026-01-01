@@ -62,7 +62,7 @@ export default function Skills() {
   const isInView = useInView(container, { once: true });
 
   return (
-    <div ref={container} className={styles.skills}>
+    <div id="skills" ref={container} className={styles.skills}>
       <div className={styles.body}>
         {/* CTF Achievements Section */}
         <motion.div 

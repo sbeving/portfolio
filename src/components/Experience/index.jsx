@@ -86,7 +86,7 @@ export default function Experience() {
   const isInView = useInView(container, { once: true, margin: "-100px" });
 
   return (
-    <div ref={container} className={styles.experience}>
+    <div id="experience" ref={container} className={styles.experience}>
       <div className={styles.body}>
         <motion.h2
           initial={{ opacity: 0, y: 30 }}

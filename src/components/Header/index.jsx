@@ -64,7 +64,7 @@ export default function Index() {
             </Magnetic>
         </div>*/}
         <AnimatePresence mode="wait">
-            {isActive && <Nav />}
+            {isActive && <Nav closeMenu={() => setIsActive(false)} />}
         </AnimatePresence>
         </>
     )
