@@ -11,7 +11,7 @@ export const metadata = {
   authors: [{ name: 'Saleh Eddine Touil' }],
   creator: 'Saleh Eddine Touil',
   publisher: 'Saleh Eddine Touil',
-  metadataBase: new URL('https://portfolio.salehtouil.tech'),
+  metadataBase: new URL('https://www.saleheddinetouil.tech'),
   alternates: {
     canonical: '/',
   },
