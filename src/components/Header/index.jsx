@@ -43,27 +43,10 @@ export default function Index() {
                 </div>
             </div>
             <div className={styles.nav}>
+
                 <Magnetic>
                     <div className={styles.el}>
-                        <a>Work</a>
-                        <div className={styles.indicator}></div>
-                    </div>
-                </Magnetic>
-                <Magnetic>
-                    <div className={styles.el}>
-                        <a>About</a>
-                        <div className={styles.indicator}></div>
-                    </div>
-                </Magnetic>
-                <Magnetic>
-                    <div className={styles.el}>
-                        <a>Contact</a>
-                        <div className={styles.indicator}></div>
-                    </div>
-                </Magnetic>
-                <Magnetic>
-                    <div className={styles.el}>
-                        <a href="/cv.pdf" target="_blank" rel="noopener noreferrer">CV</a>
+                        <a href="/cv.pdf" target="_blank" rel="noopener noreferrer" style={{textDecoration: "none"}}>CV</a>
                         <div className={styles.indicator}></div>
                     </div>
                 </Magnetic>
