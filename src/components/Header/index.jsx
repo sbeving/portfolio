@@ -6,7 +6,6 @@ import { AnimatePresence } from 'framer-motion';
 import Nav from './nav';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import Rounded from '../../common/RoundedButton';
 import Magnetic from '../../common/Magnetic';
 
 export default function Index() {
@@ -43,7 +42,6 @@ export default function Index() {
                 </div>
             </div>
             <div className={styles.nav}>
-
                 <Magnetic>
                     <div className={styles.el}>
                         <a href="/cv.pdf" target="_blank" rel="noopener noreferrer" style={{textDecoration: "none"}}>CV</a>
@@ -51,6 +49,18 @@ export default function Index() {
                     </div>
                 </Magnetic>
             </div>
+            {/* Mobile hamburger button - always visible on mobile */}
+            <div className={styles.mobileMenuBtn} onClick={() => setIsActive(!isActive)}>
+                <div className={`${styles.burger} ${isActive ? styles.burgerActive : ""}`}></div>
+            </div>
+        </div>
+        {/* Floating button that appears after scrolling */}
+        <div ref={button} className={styles.headerButtonContainer}>
+            <Magnetic>
+                <div onClick={() => setIsActive(!isActive)} className={styles.button}>
+                    <div className={`${styles.burger} ${isActive ? styles.burgerActive : ""}`}></div>
+                </div>
+            </Magnetic>
         </div>
         <AnimatePresence mode="wait">
             {isActive && <Nav />}
