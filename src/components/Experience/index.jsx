@@ -34,7 +34,7 @@ const experiences = [
       "Supported security assessments and red-team style testing",
       "Vulnerability discovery, documentation, and remediation focus"
     ]
-  },
+  },/*
   {
     title: "SOC Analyst L1 Intern",
     company: "DefensyLAB",
@@ -45,7 +45,7 @@ const experiences = [
       "Performed log analysis and basic correlation to validate alerts and reduce false positives",
       "Supported incident response workflow with clear documentation, timelines, and reporting"
     ]
-  },
+  },*/
   {
     title: "Web Developer & Project Manager",
     company: "Petshouse.tn",
