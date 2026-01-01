@@ -23,7 +23,7 @@ export const metadata = {
   openGraph: {
     title: 'Saleh Eddine Touil | Cybersecurity Specialist & CTF Champion',
     description: 'Elite cybersecurity professional specializing in penetration testing, secure development, and CTF competitions. 1st Place DarkNets CTF 3.0 • Top 8 Securinets Finals',
-    url: 'https://portfolio.salehtouil.tech',
+    url: 'https://www.saleheddinetouil.tech',
     siteName: 'Saleh Eddine Touil Portfolio',
     images: [
       {
