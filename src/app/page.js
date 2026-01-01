@@ -19,7 +19,19 @@ export default function Home() {
     (
       async () => {
           const LocomotiveScroll = (await import('locomotive-scroll')).default
-          const locomotiveScroll = new LocomotiveScroll();
+          const locomotiveScroll = new LocomotiveScroll({
+            lenisOptions: {
+              wrapper: window,
+              content: document.documentElement,
+              lerp: 0.1,
+              duration: 1.2,
+              orientation: 'vertical',
+              gestureOrientation: 'vertical',
+              smoothWheel: true,
+              smoothTouch: false, // Disable smooth scroll on touch for better mobile compatibility
+              touchMultiplier: 2,
+            }
+          });
 
           setTimeout( () => {
             setIsLoading(false);

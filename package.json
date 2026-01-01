@@ -1,6 +1,10 @@
 {
   "name": "saleh-eddine-touil-portfolio",
   "version": "0.1.0",
+  "author": "Saleh Eddine Touil",
+  "description": "Personal portfolio website of Saleh Eddine Touil, a cybersecurity enthusiast and developer.",
+  "license": "MIT",
+  "github": "https://github.com/sbeving",
   "private": true,
   "scripts": {
     "dev": "next dev",
