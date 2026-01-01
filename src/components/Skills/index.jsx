@@ -50,7 +50,7 @@ const certifications = [
   { name: "Kubernetes Fundamentals (LFS258)", issuer: "Linux Foundation", year: "2025" },
   { name: "Zero Trust Security", issuer: "Zscaler", year: "2024" },
   { name: "Cloud Digital Leader", issuer: "Google Cloud", year: "2023" },
-  { name: "Azure Fundamentals (AZ-900)", issuer: "Microsoft", year: "2023" },
+  { name: "Azure Fundamentals (AZ-900) Course", issuer: "Microsoft", year: "2023" },
   { name: "GitHub Foundations", issuer: "GitHub", year: "2024" },
   { name: "Ethical Hacker", issuer: "Cisco", year: "2024" },
   { name: "Network Defense", issuer: "Cisco", year: "2024" },
