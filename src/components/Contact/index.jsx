@@ -63,7 +63,7 @@ export default function Index() {
                         </span>
                         <span>
                             <h3>Version</h3>
-                            <p>2025 © Edition</p>
+                            <p>2026 © Edition</p>
                         </span>
                     </div>
                     <div>
@@ -76,17 +76,17 @@ export default function Index() {
                             </Magnetic>
                         </span>
                         <Magnetic>
-                            <a href="https://github.com/your-github" target="_blank" rel="noopener noreferrer" style={{textDecoration: 'none', color: 'inherit'}}>
+                            <a href="https://github.com/sbeving" target="_blank" rel="noopener noreferrer" style={{textDecoration: 'none', color: 'inherit'}}>
                                 <p>GitHub</p>
                             </a>
                         </Magnetic>
                         <Magnetic>
-                            <a href="https://portfolio.salehtouil.tech" target="_blank" rel="noopener noreferrer" style={{textDecoration: 'none', color: 'inherit'}}>
+                            <a href="https://www.saleheddinetouil.tech" target="_blank" rel="noopener noreferrer" style={{textDecoration: 'none', color: 'inherit'}}>
                                 <p>Portfolio Site</p>
                             </a>
                         </Magnetic>
                         <Magnetic>
-                            <a href="https://ctftime.org/team/your-team" target="_blank" rel="noopener noreferrer" style={{textDecoration: 'none', color: 'inherit'}}>
+                            <a href="https://ctftime.org/team/375310" target="_blank" rel="noopener noreferrer" style={{textDecoration: 'none', color: 'inherit'}}>
                                 <p>CTFtime</p>
                             </a>
                         </Magnetic>

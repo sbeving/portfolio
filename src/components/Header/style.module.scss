@@ -1,250 +1,253 @@
-.header{
-    position: absolute;
+.header {
+  position: fixed;
+  display: flex;
+  z-index: 100;
+  top: 0;
+  color: #fafafa;
+  padding: clamp(16px, 2vh, 24px) clamp(24px, 4vw, 48px);
+  justify-content: space-between;
+  width: 100%;
+  font-weight: 500;
+  box-sizing: border-box;
+  align-items: center;
+  font-family: 'Inter', system-ui, sans-serif;
+  background: rgba(9, 9, 11, 0.8);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+
+  .logo {
     display: flex;
-    z-index: 1;
-    top: 0;
-    color: white;
-    padding: clamp(20px, 3vh, 32px) clamp(24px, 4vw, 48px);
-    justify-content: space-between;
-    width: 100%;
-    font-weight: 500;
-    box-sizing: border-box;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover {
+      p {
+        color: #a78bfa;
+      }
+    }
+
+    p {
+      margin: 0;
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      font-weight: 600;
+      letter-spacing: 0.02em;
+      font-size: clamp(13px, 1.2vw, 15px);
+      color: #fafafa;
+    }
+
+    .name {
+      display: flex;
+      position: relative;
+      overflow: hidden;
+      white-space: nowrap;
+      margin-left: 5px;
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+
+      p {
+        position: relative;
+        transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+
+        &:nth-of-type(2) {
+          padding-left: 0.3em;
+        }
+
+        &:nth-of-type(3) {
+          position: absolute;
+          left: 120px;
+          padding-left: 0.3em;
+        }
+      }
+    }
+
+    &:hover {
+      .copyright {
+        transform: rotate(360deg);
+      }
+
+      .name {
+        padding-right: 30px;
+
+        .codeBy {
+          transform: translateX(-100%);
+        }
+
+        .dennis {
+          transform: translateX(-65px);
+        }
+
+        .snellenberg {
+          transform: translateX(-65px);
+        }
+      }
+    }
+  }
+
+  .nav {
+    display: flex;
     align-items: center;
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-    background: linear-gradient(180deg, rgba(15, 23, 42, 0.95) 0%, transparent 100%);
-    backdrop-filter: blur(20px);
-    
-    .logo{
-        display: flex;
-        cursor: pointer;
-        transition: all 0.3s ease;
-        
-        &:hover {
-            text-shadow: none;
-            
-            p {
-                color: #60A5FA;
-            }
-        }
-        
-        p{
-            margin: 0px;
-            transition: all 0.5s cubic-bezier(0.76, 0, 0.24, 1);
-            font-weight: 700;
-            letter-spacing: 1px;
-            font-size: clamp(14px, 1.5vw, 16px);
-        }
-        .name{
-            display: flex;
-            position: relative;
-            overflow: hidden;
-            white-space: nowrap;
-            margin-left: 5px;
-            transition: all 0.5s cubic-bezier(0.76, 0, 0.24, 1);
-            p{
-                position: relative;
-                transition: transform 0.5s cubic-bezier(0.76, 0, 0.24, 1);
-                &:nth-of-type(2){
-                    padding-left: 0.3em;
-                }
-                &:nth-of-type(3){
-                    position: absolute;
-                    left: 120px;
-                    padding-left: 0.3em;
-                }
-            }
-        }
-        &:hover{
-            .copyright{
-                transform: rotate(360deg);
-            }
-            .name{
-                padding-right: 30px;
-                .codeBy{
-                    transform: translateX(-100%);
-                }
-                .dennis{
-                    transform: translateX(-65px);
-                }
-                .snellenberg{
-                    transform: translateX(-65px);
-                }
-            }
-        }
-    }
-    .nav{
-        display: flex;
-        align-items: center;
+    gap: 4px;
 
-        .el{
-            display: flex;
-            flex-direction: column;
-            position: relative;
-            z-index: 1;
-            padding: 15px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            
-            &:hover{
-                color: #60A5FA;
-                text-shadow: 0 0 10px rgba(96, 165, 250, 0.6);
-                
-                .indicator{
-                    transform: scale(1);
-                }
-            }
-            .indicator{
-                position: absolute;
-                width: 5px;
-                height: 5px;
-                top: 45px;
-                left: 50%;
-                background: #60A5FA;
-                border-radius: 50%;
-                transform: scale(0) translateX(-50%);
-                transition: transform 0.3s cubic-bezier(0.76, 0, 0.24, 1);
-                box-shadow: 0 0 10px rgba(96, 165, 250, 0.8),
-                            0 0 20px rgba(96, 165, 250, 0.5);
-            }
-        }
-        a{
-            cursor: pointer;
-            transition: all 0.3s ease;
-            
-            &:hover {
-                color: #60A5FA;
-                text-shadow: 0 0 10px rgba(96, 165, 250, 0.5);
-            }
-        }
-    } 
-}
-.headerButtonContainer{
-    transform: scale(0);
-    position: fixed;
-    right: 0px;
-    z-index: 4;
+    .el {
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      z-index: 1;
+      padding: 10px 16px;
+      cursor: pointer;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      font-size: 14px;
+      color: #a1a1aa;
+      border-radius: 6px;
 
-    .button{
-        position: relative;
-        margin: 20px;
-        width: clamp(70px, 8vw, 80px);
-        height: clamp(70px, 8vw, 80px);
-        border-radius: 50%;
-        background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
-        cursor: pointer;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        border: 2px solid rgba(96, 165, 250, 0.3);
-        box-shadow: 0 0 20px rgba(96, 165, 250, 0.2),
-                    inset 0 0 20px rgba(96, 165, 250, 0.1);
-        transition: all 0.3s ease;
-        
-        &:hover {
-            border-color: rgba(96, 165, 250, 0.6);
-            box-shadow: 0 0 30px rgba(96, 165, 250, 0.4),
-                        inset 0 0 30px rgba(96, 165, 250, 0.2);
+      &:hover {
+        color: #fafafa;
+        background: rgba(255, 255, 255, 0.05);
+
+        .indicator {
+          transform: scaleX(1);
         }
-    }
-    
-    .burger{
+      }
+
+      .indicator {
+        position: absolute;
         width: 100%;
-        position: relative;
-        z-index: 1;
-        &::after, &::before{
-            content: "";
-            display: block;
-            height: 2px;
-            width: 40%;
-            margin: auto;
-            background: linear-gradient(90deg, #60A5FA, #3B82F6);
-            position: relative;
-            transition: transform 0.3s;
-            box-shadow: 0 0 10px rgba(96, 165, 250, 0.6);
-        }
-    
-        &::after{
-            top: -5px;
-        }
-    
-        &::before{
-            top: 5px;
-        }
+        height: 1px;
+        bottom: 6px;
+        left: 0;
+        background: linear-gradient(90deg, transparent, #8b5cf6, transparent);
+        transform: scaleX(0);
+        transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      }
     }
-    
-    .burgerActive{
-    
-        &::after{
-            transform: rotate(45deg);
-            top: -1px;
-        }
-    
-        &::before{
-            transform: rotate(-45deg);
-            top: 0px;
-        }
-        
+
+    a {
+      cursor: pointer;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      color: #a1a1aa;
+      font-size: 14px;
+      padding: 10px 16px;
+      border-radius: 6px;
+
+      &:hover {
+        color: #fafafa;
+        background: rgba(255, 255, 255, 0.05);
+      }
     }
+  }
+}
+
+.headerButtonContainer {
+  transform: scale(0);
+  position: fixed;
+  right: 0;
+  z-index: 100;
+
+  .button {
+    position: relative;
+    margin: 20px;
+    width: clamp(56px, 7vw, 64px);
+    height: clamp(56px, 7vw, 64px);
+    border-radius: 50%;
+    background: #18181b;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover {
+      background: #27272a;
+      border-color: rgba(139, 92, 246, 0.3);
+    }
+  }
+
+  .burger {
+    width: 100%;
+    position: relative;
+    z-index: 1;
+
+    &::after,
+    &::before {
+      content: '';
+      display: block;
+      height: 1.5px;
+      width: 36%;
+      margin: auto;
+      background: #fafafa;
+      position: relative;
+      transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    &::after {
+      top: -4px;
+    }
+
+    &::before {
+      top: 4px;
+    }
+  }
+
+  .burgerActive {
+    &::after {
+      transform: rotate(45deg);
+      top: -1px;
+    }
+
+    &::before {
+      transform: rotate(-45deg);
+      top: 0;
+    }
+  }
 }
 
 @media (max-width: 1024px) {
-    .header {
-        padding: 20px 30px;
-        
-        .logo {
-            p {
-                font-size: 14px;
-            }
-        }
-        
-        .nav {
-            gap: 10px;
-            
-            .el {
-                padding: 10px;
-                font-size: 14px;
-            }
-        }
+  .header {
+    padding: 16px 24px;
+
+    .logo p {
+      font-size: 13px;
     }
+
+    .nav {
+      gap: 0;
+
+      .el {
+        padding: 8px 12px;
+        font-size: 13px;
+      }
+    }
+  }
 }
 
 @media (max-width: 768px) {
-    .header {
-        padding: 15px 20px;
-        
-        .logo {
-            p {
-                font-size: 12px;
-            }
-            
-            .name {
-                .codeBy, .dennis, .snellenberg {
-                    display: none;
-                }
-            }
+  .header {
+    padding: 12px 16px;
+
+    .logo {
+      p {
+        font-size: 12px;
+      }
+
+      .name {
+        .codeBy,
+        .dennis,
+        .snellenberg {
+          display: none;
         }
-        
-        .nav {
-            .el {
-                padding: 8px;
-                font-size: 12px;
-                
-                .indicator {
-                    display: none;
-                }
-            }
-            
-            a {
-                font-size: 12px;
-            }
-        }
+      }
     }
-    
-    .headerButtonContainer {
-        .button {
-            width: 60px;
-            height: 60px;
-            margin: 15px;
-        }
-}
+
+    .nav {
+      display: none;
+    }
+  }
+
+  .headerButtonContainer {
+    .button {
+      width: 48px;
+      height: 48px;
+      margin: 12px;
+    }
+  }
 }

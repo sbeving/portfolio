@@ -23,11 +23,11 @@ const skills = [
 ];
 
 const achievements = [
-  { title: "1st Place", event: "DarkNets CTF 3.0 (2025)" },
-  { title: "1st Place", event: "Cr4ck0ut CTF 2.0" },
-  { title: "2nd Place", event: "CyberSphere Congress CTF" },
-  { title: "Top 8", event: "Securinets INSAT International Finals" },
-  { title: "157th/1300+", event: "PatriotCTF 2025 (Solo)" }
+  { title: "1st Place", event: "DarkNets 3.0 (2025)" },
+  { title: "1st Place", event: "Cr4ck0ut 2.0" },
+  { title: "2nd Place", event: "CyberMaze Engineers Spark" },
+  { title: "Top 8", event: "Securinets INSAT International Finals" }
+
 ];
 
 export default function Skills() {

@@ -1,143 +1,140 @@
-.projects{
+.projects {
+  display: flex;
+  align-items: center;
+  padding-left: clamp(24px, 8vw, 120px);
+  padding-right: clamp(24px, 8vw, 120px);
+  flex-direction: column;
+  margin-top: 0;
+  margin-bottom: 0;
+  background: #09090b;
+  padding-top: clamp(80px, 12vh, 140px);
+  padding-bottom: clamp(80px, 12vh, 140px);
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: min(100%, 1200px);
+    height: 1px;
+    background: linear-gradient(90deg, transparent 0%, rgba(255, 255, 255, 0.06) 20%, rgba(255, 255, 255, 0.06) 80%, transparent 100%);
+  }
+
+  .body {
+    max-width: 1200px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: clamp(48px, 8vh, 80px);
+  }
+
+  .modalContainer {
+    height: 320px;
+    width: 380px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    background: #18181b;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: 3;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+  }
+
+  .modalSlider {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    transition: top 0.5s cubic-bezier(0.76, 0, 0.24, 1);
+  }
+
+  .modal {
+    height: 100%;
+    width: 100%;
     display: flex;
     align-items: center;
-    padding-left: clamp(30px, 10vw, 150px);
-    padding-right: clamp(30px, 10vw, 150px);
-    flex-direction: column;
-    margin-top: clamp(60px, 12vh, 100px);
-    margin-bottom: clamp(60px, 12vh, 100px);
-    background: linear-gradient(180deg, #334155 0%, #1E293B 50%, #0F172A 100%);
-    padding-top: clamp(60px, 12vh, 100px);
-    padding-bottom: clamp(60px, 12vh, 100px);
-    position: relative;
+    justify-content: center;
+  }
 
-    &::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        height: 1px;
-        background: linear-gradient(90deg, transparent, rgba(148, 163, 184, 0.5), transparent);
-        box-shadow: none;
+  .modal img {
+    height: auto;
+  }
+
+  .cursor,
+  .cursorLabel {
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    background: #8b5cf6;
+    color: #fafafa;
+    position: fixed;
+    z-index: 3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    font-weight: 500;
+    pointer-events: none;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+  }
+
+  .cursorLabel {
+    background-color: transparent;
+    color: #fafafa;
+  }
+
+  @media (max-width: 1024px) {
+    padding-left: 32px;
+    padding-right: 32px;
+    padding-top: 100px;
+    padding-bottom: 100px;
+
+    .modalContainer {
+      height: 280px;
+      width: 320px;
     }
 
-    .body{
-        max-width: 1400px;
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        margin-bottom: clamp(60px, 10vh, 100px);
+    .cursor,
+    .cursorLabel {
+      width: 64px;
+      height: 64px;
+      font-size: 11px;
     }
-    
-    .modalContainer{
-        height: 350px;
-        width: 400px;
-        position: fixed;
-        top: 50%;
-        left: 50%;
-        background: linear-gradient(135deg, #1a1a2e, #16213e);
-        pointer-events: none;
-        overflow: hidden;
-        z-index: 3;
-        border-radius: 15px;
-        border: 2px solid rgba(96, 165, 250, 0.3);
-        box-shadow: 0 0 30px rgba(96, 165, 250, 0.4),
-                    0 0 60px rgba(59, 130, 246, 0.2),
-                    inset 0 0 20px rgba(96, 165, 250, 0.1);
+  }
+
+  @media (max-width: 768px) {
+    padding-left: 24px;
+    padding-right: 24px;
+    padding-top: 80px;
+    padding-bottom: 80px;
+
+    .modalContainer {
+      display: none;
     }
-    
-    .modalSlider{
-        height: 100%;
-        width: 100%;
-        position: relative;
-        transition: top 0.5s cubic-bezier(0.76, 0, 0.24, 1);
+
+    .cursor,
+    .cursorLabel {
+      display: none;
     }
-    
-    .modal{
-        height: 100%;
-        width: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+  }
+
+  @media (max-width: 480px) {
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-top: 64px;
+    padding-bottom: 64px;
+
+    .body {
+      margin-bottom: 40px;
     }
-    
-    .modal img{
-        height: auto;
-    }
-    
-    .cursor, .cursorLabel{
-        width: 80px;
-        height: 80px;
-        border-radius: 50%;
-        background-color: #60A5FA;
-        color: #0a0a0a;
-        position: fixed;
-        z-index:3;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 14px;
-        font-weight: 700;
-        pointer-events: none;
-        box-shadow: 0 0 20px rgba(96, 165, 250, 0.6),
-                    0 0 40px rgba(96, 165, 250, 0.4);
-        font-family: 'Courier New', monospace;
-    }
-    
-    .cursorLabel{
-        background-color: transparent;
-        color: #60A5FA;
-        text-shadow: 0 0 5px #60A5FA;
-    }
-    
-    @media (max-width: 1024px) {
-        padding-left: 40px;
-        padding-right: 40px;
-        padding-top: 70px;
-        padding-bottom: 70px;
-        margin-top: 70px;
-        
-        .modalContainer {
-            height: 300px;
-            width: 350px;
-        }
-        
-        .cursor, .cursorLabel {
-            width: 70px;
-            height: 70px;
-            font-size: 12px;
-        }
-    }
-    
-    @media (max-width: 768px) {
-        padding-left: 20px;
-        padding-right: 20px;
-        padding-top: 50px;
-        padding-bottom: 50px;
-        margin-top: 50px;
-        
-        .modalContainer {
-            display: none;
-        }
-        
-        .cursor, .cursorLabel {
-            display: none;
-        }
-    }
-    
-    @media (max-width: 480px) {
-        padding-left: 15px;
-        padding-right: 15px;
-        padding-top: 40px;
-        padding-bottom: 40px;
-        margin-top: 40px;
-        
-        .body {
-            margin-bottom: 40px;
-        }
-    }
+  }
 }
 

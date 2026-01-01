@@ -38,9 +38,8 @@ export default function Index() {
             <div className={styles.logo}>
                 <p className={styles.copyright}>⚡</p>
                 <div className={styles.name}>
-                    <p className={styles.codeBy}>root@</p>
-                    <p className={styles.dennis}>cyber</p>
-                    <p className={styles.snellenberg}>security</p>
+                    <p className={styles.codeBy}>sbeve@</p>
+                    <p className={styles.dennis}>SalehEddineTouil</p>
                 </div>
             </div>
             <div className={styles.nav}>
