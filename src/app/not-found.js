@@ -78,6 +78,14 @@ export default function NotFound() {
     }
   }, [currentLine]);
 
+  // Auto redirect after 5 seconds
+  useEffect(() => {
+    const redirectTimeout = setTimeout(() => {
+      window.location.href = '/';
+    }, 5000);
+    return () => clearTimeout(redirectTimeout);
+  }, []);
+
   return (
     <div className={styles.container}>
       {/* Background matrix effect */}
@@ -178,25 +186,15 @@ export default function NotFound() {
           </div>
         </motion.div>
 
-        {/* Back home button */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
+        {/* Auto redirect message */}
+        <motion.p
+          className={styles.redirect}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
           transition={{ delay: 1 }}
         >
-          <motion.a
-            href="/"
-            className={styles.homeButton}
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            onClick={(e) => {
-              e.preventDefault();
-              window.location.href = '/';
-            }}
-          >
-            🏠 Return to Safety
-          </motion.a>
-        </motion.div>
+          Redirecting to safety in 5 seconds... ⏳
+        </motion.p>
 
         {/* Easter egg */}
         <motion.p 
