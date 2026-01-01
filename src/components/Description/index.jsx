@@ -5,7 +5,7 @@ import { slideUp, opacity } from './animation';
 import Rounded from '../../common/RoundedButton';
 export default function Index() {
 
-    const phrase = "Cybersecurity Specialist • ICT Engineering Student • ISET'COM Tunis";
+    const phrase = "Results-driven Security Engineer & CTF Champion pursuing ICT at ISET'COM Tunis";
     const description = useRef(null);
     const isInView = useInView(description)
     return (
@@ -18,7 +18,13 @@ export default function Index() {
                     })
                 }
                 </p>
-                <motion.p variants={opacity} animate={isInView ? "open" : "closed"}>Full-stack developer with expertise in penetration testing, secure architecture design, and competitive CTF challenges. Passionate about building secure, scalable applications and solving complex security problems.<br/><br/>🏆 <strong>CTF Achievements:</strong> 1st Place DarkNets CTF 3.0 (2024) • Top 8 Securinets INSAT Finals • Top 20 Arab Security CyberDay<br/><br/>🔐 <strong>Core Skills:</strong> Penetration Testing • Secure Development • Cloud Security • AI/ML Integration • Full-Stack (MERN, Django, FastAPI)</motion.p>
+                <motion.p variants={opacity} animate={isInView ? "open" : "closed"}>
+                    Certified cybersecurity professional with hands-on experience in AI integration, SOC operations, and red-team testing. Passionate about securing networks, solving CTF challenges, and building innovative solutions that bridge security with emerging technologies.
+                    <br/><br/>
+                    <strong>Research Interests:</strong> Adversarial Machine Learning (evasion/robustness/privacy) • Web & API Security • Threat Hunting and Attack Reconstruction • Secure AI Integration • Log Analysis and Correlation
+                    <br/><br/>
+                    <strong>Certifications:</strong> CCNA Enterprise Networking • CCEP (Red Team Leaders) • ISC2 Candidate • API Security Fundamentals • Kubernetes & Zero Trust (Linux Foundation)
+                </motion.p>
                 <div data-scroll data-scroll-speed={0.1}>
                     <Rounded className={styles.button}>
                         <p>About me</p>

@@ -36,7 +36,7 @@ export default function Index() {
         <>
         <div ref={header} className={styles.header}>
             <div className={styles.logo}>
-                <p className={styles.copyright}>⚡</p>
+                <p className={styles.copyright}>👾</p>
                 <div className={styles.name}>
                     <p className={styles.codeBy}>sbeve@</p>
                     <p className={styles.dennis}>SalehEddineTouil</p>

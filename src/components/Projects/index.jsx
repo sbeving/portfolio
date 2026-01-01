@@ -9,39 +9,88 @@ import Rounded from '../../common/RoundedButton';
 
 const projects = [
   {
-    title: "🔍 LogChat - AI-Powered Log Correlation Dashboard",
+    title: "🔍 LogChat - AI Log Correlation Dashboard",
     src: "logChat.png",
     color: "#1a1a2e",
-    category: "Defense & Monitoring",
-    description: "Real-time security event analysis with AI-driven threat detection and automated incident response"
+    category: "Defense & Monitoring • 2025",
+    description: "FastAPI + MongoDB real-time log ingestion with AI-powered threat detection, automated incident response, and natural language querying"
   },
   {
-    title: "🌐 GoReconX - Advanced OSINT & Network Reconnaissance",
+    title: "🌐 GoReconX - OSINT & Reconnaissance Tool",
     src: "",
-    category: "Offense & Reconnaissance",
+    category: "Offense & Reconnaissance • 2025",
     color: "#16213e",
-    description: "Comprehensive security assessment tool with automated vulnerability scanning and reporting"
+    description: "Go-based automated recon tool with subdomain enumeration, port scanning, service fingerprinting, and comprehensive reporting"
   },
   {
-    title: "🛡️ AI-Powered E-commerce & Web Application Security Testing",
+    title: "🛡️ AI-Powered E-commerce Security Integration",
     src: "",
     color: "#0f3460",
-    category: "AI, Security Testing & Automation",
-    description: "Ai integration, Deepseek-R1, n8n workflows and securing api gateway with OAuth 2.0 Microservices security layer with JWT authentication and rate limiting"
+    category: "AI Integration & Security • 2025 (Megapc)",
+    description: "Deepseek-R1 chatbot, intelligent PC builder, n8n workflow automation, OAuth 2.0 API gateway hardening, JWT microservices security"
   },
   {
-    title: "⚙️ C2S Enterprise Security Management",
+    title: "⚙️ Security Hardening & Automation Suite",
     src: "",
     color: "#533483",
-    category: "Full-Stack Development & Security",
-    description: "Full-stack application with role-based access control and encrypted data handling"
+    category: "Security Engineering • 2025 (Megapc)",
+    description: "Backoffice hardening against broken auth, exposed APIs, privilege escalation. Automated security workflows reducing manual tasks"
   },
   {
-    title: "🚩 CTF Platform & Challenge Development",
+    title: "📚 E-Books Platform (MERN Stack)",
+    src: "ebookscom.png",
+    color: "#2d1b4e",
+    category: "Full-Stack Development • 2024",
+    description: "Complete e-commerce platform with MERN stack, Firebase Auth, Stripe payments, admin dashboard, inventory management"
+  },
+  {
+    title: "🏢 C2S Enterprise Backoffice",
+    src: "",
+    color: "#1a1a2e",
+    category: "Enterprise Application • 2024",
+    description: "Full-stack Angular + .NET application with role-based access control (RBAC), encrypted data handling, and audit logging"
+  },
+  {
+    title: "📊 ACS Quality Management System",
+    src: "",
+    color: "#16213e",
+    category: "Enterprise Solution • 2024",
+    description: "Angular + Spring Boot quality management system with document control, compliance tracking, and reporting dashboard"
+  },
+  {
+    title: "💪 AI Fitness & Nutrition App",
+    src: "ai-coach.png",
+    color: "#0f3460",
+    category: "Mobile Development • 2024",
+    description: "Flutter cross-platform fitness app with AI Assistant, workout tracking, meal planning, progress analytics, and social features"
+  },
+  {
+    title: "🐾 Petshouse.tn E-commerce Platform",
+    src: "petshouse.png",
+    color: "#533483",
+    category: "Odoo Development • 2024",
+    description: "Complete pet shop management with invoicing, inventory, CRM integration, SEO optimization (25% sales increase)"
+  },
+  {
+    title: "🚗 Oussman4WD Automotive Website",
+    src: "oussman4wd.png",
+    color: "#2d1b4e",
+    category: "Web Development • 2024",
+    description: "Responsive automotive website with custom vehicle configurator, service booking, and integrated Google Maps"
+  },
+  {
+    title: "🚨 Snort IDS Lab Environment",
     src: "",
     color: "#2d1b4e",
-    category: "CTF Infrastructure & Automation",
-    description: "Custom CTF infrastructure with Web, Crypto, Pwn, and Forensics challenges"
+    category: "Network Security • 2023",
+    description: "Intrusion Detection System lab with custom rule creation, packet analysis, alert correlation, and threat hunting exercises"
+  },
+  {
+    title: "🔐 OpenSSL PKI Infrastructure Lab",
+    src: "",
+    color: "#1a1a2e",
+    category: "Cryptography & PKI • 2023",
+    description: "Complete PKI implementation with CA hierarchy, certificate lifecycle management, CRL distribution, and OCSP responder"
   }
 ]
 
@@ -108,14 +157,20 @@ export default function Home() {
             <div style={{top: index * -100 + "%"}} className={styles.modalSlider}>
             {
                 projects.map( (project, index) => {
-                const { src, color } = project
+                const { src, color, description } = project
                 return <div className={styles.modal} style={{backgroundColor: color}} key={`modal_${index}`}>
-                    <Image 
-                    src={`/images/${src}`}
-                    width={300}
-                    height={0}
-                    alt="image"
-                    />
+                    {src ? (
+                      <Image 
+                        src={`/images/${src}`}
+                        width={300}
+                        height={0}
+                        alt="image"
+                      />
+                    ) : (
+                      <div className={styles.modalDescription}>
+                        <p>{description}</p>
+                      </div>
+                    )}
                 </div>
                 })
             }

@@ -26,12 +26,12 @@ export default function Index() {
                             src={`/images/me.JPG`}
                             />
                         </div>
-                        <h2>Let&apos;s secure</h2>
+                        <h2>Let&apos;s build</h2>
                     </span>
-                    <h2>the future</h2>
+                    <h2>something secure</h2>
                     <motion.div style={{x}} className={styles.buttonContainer}>
-                        <Rounded  backgroundColor={"#00ff88"} className={styles.button}>
-                            <p>Contact Me</p>
+                        <Rounded  backgroundColor={"#8b5cf6"} className={styles.button}>
+                            <p>Get In Touch</p>
                         </Rounded>
                     </motion.div>
                     <motion.svg style={{rotate, scale: 2}} width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -58,17 +58,22 @@ export default function Index() {
                 <div className={styles.info}>
                     <div>
                         <span>
+                            <h3>Education</h3>
+                            <p>ISET&apos;COM Tunis</p>
+                            <p className={styles.subInfo}>Bachelor ICT • Expected 2026</p>
+                        </span>
+                        <span>
                             <h3>Location</h3>
                             <p>Soukra, Ariana, Tunisia</p>
                         </span>
                         <span>
-                            <h3>Version</h3>
-                            <p>2026 © Edition</p>
+                            <h3>Languages</h3>
+                            <p className={styles.subInfo}>Arabic (Native) • English (B2) • French (B1)</p>
                         </span>
                     </div>
                     <div>
                         <span>
-                            <h3>socials</h3>
+                            <h3>Connect</h3>
                             <Magnetic>
                                 <a href="https://www.linkedin.com/in/saleh-eddine-touil/" target="_blank" rel="noopener noreferrer" style={{textDecoration: 'none', color: 'inherit'}}>
                                     <p>LinkedIn</p>
@@ -81,13 +86,13 @@ export default function Index() {
                             </a>
                         </Magnetic>
                         <Magnetic>
-                            <a href="https://www.saleheddinetouil.tech" target="_blank" rel="noopener noreferrer" style={{textDecoration: 'none', color: 'inherit'}}>
-                                <p>Portfolio Site</p>
+                            <a href="https://ctftime.org/team/375310" target="_blank" rel="noopener noreferrer" style={{textDecoration: 'none', color: 'inherit'}}>
+                                <p>CTFtime (Team no!dea)</p>
                             </a>
                         </Magnetic>
                         <Magnetic>
-                            <a href="https://ctftime.org/team/375310" target="_blank" rel="noopener noreferrer" style={{textDecoration: 'none', color: 'inherit'}}>
-                                <p>CTFtime</p>
+                            <a href="https://www.saleheddinetouil.tech" target="_blank" rel="noopener noreferrer" style={{textDecoration: 'none', color: 'inherit'}}>
+                                <p>Portfolio</p>
                             </a>
                         </Magnetic>
                     </div>
