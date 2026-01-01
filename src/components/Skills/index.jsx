@@ -29,11 +29,9 @@ const skills = [
 const teamAchievements = [
   { title: "🥇 1st Place", event: "DarkNets 3.0 CTF", note: "National Competition 2025" },
   { title: "🥇 1st Place", event: "Cr4ck0ut 2.0 CTF", note: "National Competition" },
-  { title: "🥈 2nd Place", event: "CyberSphere Congress CTF", note: "International Event" },
   { title: "🥈 2nd Place", event: "CyberMaze CTF", note: "Engineers Spark" },
   { title: "🥈 2nd Place", event: "Securinets TEK-UP Quals", note: "11 First Bloods!" },
   { title: "🏆 Top 8", event: "Securinets INSAT International", note: "Among 600+ Teams" },
-  { title: "🏆 Top 10", event: "Securinets TEK-UP Finals", note: "National Finals" }
 ];
 
 const soloAchievements = [
