@@ -43,23 +43,27 @@
     transform: translateY(-50%);
     width: 100%;
     z-index: 1;
+    overflow: hidden;
   }
 
   .slider {
     position: relative;
-    white-space: nowrap;
+    display: flex;
+    width: fit-content;
+    will-change: transform;
   }
 
   .slider p {
-    position: relative;
+    flex-shrink: 0;
     margin: 0;
     color: #fafafa;
     font-size: clamp(72px, 11vw, 150px);
     font-weight: 800;
-    padding-right: 0.3em;
+    padding-right: 0.4em;
     text-transform: uppercase;
     letter-spacing: -0.04em;
     font-family: 'Inter', system-ui, sans-serif;
+    white-space: nowrap;
     
     // Elegant gradient text
     background: linear-gradient(
@@ -72,12 +76,6 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-  }
-
-  .slider p:nth-of-type(2) {
-    position: absolute;
-    left: 100%;
-    top: 0;
   }
 
   .description {
