@@ -27,6 +27,7 @@ const skills = [
 ];
 
 const teamAchievements = [
+  { title: "🥇 1st Place", event: "Darkest Hour 3.0 CTF", note: "by Securinets Insat" },
   { title: "🥇 1st Place", event: "DarkNets 3.0 CTF", note: "National Competition 2025" },
   { title: "🥇 1st Place", event: "Cr4ck0ut 2.0 CTF", note: "National Competition" },
   { title: "🥈 2nd Place", event: "CyberMaze CTF", note: "Engineers Spark" },
