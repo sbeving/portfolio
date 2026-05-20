@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import { opacity, slideUp } from './anim';
 
-const words = ["Initializing...", "Loading Systems...", "⚡ Root Access", "🔐 Secure Mode", "🚩 CTF Ready", "💻 Deploy", "✓ Connected"]
+const words = ["Initializing...", "Loading Systems...", "Root Access", "Secure Mode", "CTF Ready", "Deploy", "Connected"]
 
 export default function Index() {
     const [index, setIndex] = useState(0);

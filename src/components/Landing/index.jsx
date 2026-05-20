@@ -1,5 +1,4 @@
 'use client'
-import Image from 'next/image'
 import styles from './style.module.scss'
 import { useRef, useLayoutEffect } from 'react';
 import gsap from 'gsap';
@@ -76,12 +75,6 @@ export default function Home() {
 
   return (
     <motion.main id="home" variants={slideUp} initial="initial" animate="enter" className={styles.landing}>
-      <Image 
-        src="/images/background.png"
-        fill={true}
-        alt="background"
-        priority
-      />
       <section className={styles.heroPanel} aria-label="Portfolio introduction">
         <div className={styles.kicker}>
           <span className={styles.statusDot}></span>
