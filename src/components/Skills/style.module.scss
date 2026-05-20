@@ -3,6 +3,7 @@
   background:
     linear-gradient(180deg, #09090b 0%, #0d1110 35%, #09090b 100%);
   position: relative;
+  overflow: clip;
 
   &::before {
     content: '';
