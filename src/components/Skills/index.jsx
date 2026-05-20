@@ -5,12 +5,16 @@ import { useRef } from 'react';
 
 const skills = [
   {
-    category: "Programming Languages",
-    items: ["Python", "Go", "C/C++", "JavaScript", "TypeScript", "Bash", "PHP", "Java", "SQL"]
+    category: "Bug Bounty & AppSec",
+    items: ["BOLA/IDOR", "Auth Bypass", "JWT Testing", "GraphQL", "Business Logic", "Recon", "API Security", "Access Control", "Responsible Disclosure"]
   },
   {
     category: "Security Tools",
-    items: ["Burp Suite", "Wireshark", "Nmap", "Metasploit", "Snort", "Splunk", "Volatility", "Kali Linux", "Ghidra", "OWASP ZAP"]
+    items: ["Burp Suite", "Caido", "Nmap", "Wireshark", "Metasploit", "OWASP ZAP", "Kali Linux", "Snort", "Splunk", "Ghidra"]
+  },
+  {
+    category: "Programming Languages",
+    items: ["Python", "Go", "JavaScript", "TypeScript", "Bash", "PHP", "C/C++", "Java", "SQL"]
   },
   {
     category: "Frameworks & Stacks",
@@ -26,13 +30,20 @@ const skills = [
   }
 ];
 
+const bugBountyMilestones = [
+  { title: "Full-time", event: "Intigriti Hunter", note: "Active since Jan 2026" },
+  { title: "Medium-Critical", event: "Accepted reports", note: "Web and API impact range" },
+  { title: "VDP", event: "Digital Flanders", note: "Improper access control confirmed via YesWeHack" },
+  { title: "Research Loop", event: "Duplicates to variants", note: "Variant hunting, impact refinement, better recon" }
+];
+
 const teamAchievements = [
-  { title: "🥇 1st Place", event: "Darkest Hour 3.0 CTF", note: "by Securinets Insat" },
-  { title: "🥇 1st Place", event: "DarkNets 3.0 CTF", note: "National Competition 2025" },
-  { title: "🥇 1st Place", event: "Cr4ck0ut 2.0 CTF", note: "National Competition" },
-  { title: "🥈 2nd Place", event: "CyberMaze CTF", note: "Engineers Spark" },
-  { title: "🥈 2nd Place", event: "Securinets TEK-UP Quals", note: "11 First Bloods!" },
-  { title: "🏆 Top 8", event: "Securinets INSAT International", note: "Among 600+ Teams" },
+  { title: "1st Place", event: "Institut français de Tunisie CTF", note: "Team Shadows" },
+  { title: "1st Place", event: "Darkest Hour CTF", note: "Team no!dea" },
+  { title: "1st Place", event: "Darkest Hour CTF Eclipse Edition", note: "Team no!dea" },
+  { title: "1st Place", event: "DarkNets 3.0 CTF", note: "National Competition 2025" },
+  { title: "1st Place", event: "Cr4ck0ut 2.0 CTF", note: "National Competition" },
+  { title: "Top 8", event: "Securinets INSAT International", note: "Among 600+ teams" },
 ];
 
 const soloAchievements = [
@@ -40,22 +51,16 @@ const soloAchievements = [
 ];
 
 const certifications = [
-  { name: "CCNA: Enterprise Networking, Security, and Automation", issuer: "Cisco", year: "2024" },
-  { name: "CCNA: Switching, Routing, and Wireless Essentials", issuer: "Cisco", year: "2024" },
-  { name: "CCNA: Introduction to Networks", issuer: "Cisco", year: "2024" },
-  { name: "CCEP: Junior Cybersecurity Analyst", issuer: "Cisco", year: "2024" },
-  { name: "CC (Certified in Cybersecurity)", issuer: "ISC2", year: "2024" },
+  { name: "Hack The Box Certified Penetration Testing Specialist (CPTS)", issuer: "Hack The Box", year: "2026" },
+  { name: "TOEIC", issuer: "ETS", year: "2025" },
+  { name: "Certified Cybersecurity Educator Professional (CCEP)", issuer: "Red Team Leaders", year: "2025" },
+  { name: "CCNA: Enterprise Networking, Security, and Automation", issuer: "Cisco", year: "2025" },
+  { name: "CCNA: Introduction to Networks", issuer: "Cisco", year: "2025" },
   { name: "API Security Fundamentals", issuer: "APIsec University", year: "2025" },
-  { name: "OWASP API Security Top 10", issuer: "APIsec University", year: "2025" },
-  { name: "API Penetration Testing", issuer: "APIsec University", year: "2025" },
-  { name: "Kubernetes Fundamentals (LFS258)", issuer: "Linux Foundation", year: "2025" },
-  { name: "Zero Trust Security", issuer: "Zscaler", year: "2024" },
-  { name: "Cloud Digital Leader", issuer: "Google Cloud", year: "2023" },
-  { name: "Azure Fundamentals (AZ-900) Course", issuer: "Microsoft", year: "2023" },
-  { name: "GitHub Foundations", issuer: "GitHub", year: "2024" },
-  { name: "Ethical Hacker", issuer: "Cisco", year: "2024" },
-  { name: "Network Defense", issuer: "Cisco", year: "2024" },
-  { name: "Endpoint Security", issuer: "Cisco", year: "2024" }
+  { name: "Prompt Engineering Foundation Learner", issuer: "Certiprof", year: "2025" },
+  { name: "LFS183: Introduction to Zero Trust", issuer: "The Linux Foundation", year: "2025" },
+  { name: "LFS158: Introduction to Kubernetes", issuer: "The Linux Foundation", year: "2025" },
+  { name: "Cybersecurity Fundamentals", issuer: "IBM", year: "2025" }
 ];
 
 export default function Skills() {
@@ -65,14 +70,40 @@ export default function Skills() {
   return (
     <div id="skills" ref={container} className={styles.skills}>
       <div className={styles.body}>
-        {/* CTF Achievements Section */}
+        {/* Bug bounty section */}
+        <motion.div
+          className={styles.achievementsSection}
+          initial={{ opacity: 0, y: 50 }}
+          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.8 }}
+        >
+          <h2>Bug Bounty Focus</h2>
+          <p className={styles.teamBadge}>Intigriti - Web, API, auth, access control, and exploit chaining</p>
+          <div className={styles.achievementsGrid}>
+            {bugBountyMilestones.map((achievement, index) => (
+              <motion.div
+                key={index}
+                className={styles.achievementCard}
+                initial={{ opacity: 0, y: 20 }}
+                animate={isInView ? { opacity: 1, y: 0 } : {}}
+                transition={{ duration: 0.5, delay: index * 0.08 }}
+              >
+                <h3>{achievement.title}</h3>
+                <p className={styles.eventName}>{achievement.event}</p>
+                <span className={styles.eventNote}>{achievement.note}</span>
+              </motion.div>
+            ))}
+          </div>
+        </motion.div>
+
+        {/* CTF achievements section */}
         <motion.div 
           className={styles.achievementsSection}
           initial={{ opacity: 0, y: 50 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8 }}
         >
-          <h2>🏴 CTF Achievements</h2>
+          <h2>CTF Achievements</h2>
           <p className={styles.teamBadge}>Team no!dea — Competitive CTF Team</p>
           <div className={styles.achievementsGrid}>
             {teamAchievements.map((achievement, index) => (
@@ -115,7 +146,7 @@ export default function Skills() {
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8, delay: 0.3 }}
         >
-          <h2>💻 Technical Skills</h2>
+          <h2>Technical Skills</h2>
           <div className={styles.skillsGrid}>
             {skills.map((skillSet, index) => (
               <motion.div
@@ -143,7 +174,7 @@ export default function Skills() {
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8, delay: 0.5 }}
         >
-          <h2>📜 Certifications ({certifications.length}+)</h2>
+          <h2>Certifications</h2>
           <div className={styles.certGrid}>
             {certifications.map((cert, index) => (
               <motion.div

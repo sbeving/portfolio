@@ -5,9 +5,9 @@ import Header from '../components/Header';
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
-  title: 'Saleh Eddine Touil | Cybersecurity Specialist & CTF Champion',
-  description: 'Elite cybersecurity professional specializing in penetration testing, secure development, and CTF competitions. 1st Place DarkNets CTF 3.0 • Top 8 Securinets Finals • Full-Stack Developer',
-  keywords: ['cybersecurity', 'penetration testing', 'CTF', 'web security', 'full-stack developer', 'ethical hacking', 'security researcher', 'Tunisia'],
+  title: 'Saleh Eddine Touil | Bug Bounty Hunter & CPTS',
+  description: 'Full-time bug bounty hunter on Intigriti focused on Web and API security, access control, authentication logic, recon, exploit chaining, and CTF competition.',
+  keywords: ['bug bounty', 'intigriti', 'cybersecurity', 'penetration testing', 'CPTS', 'CTF', 'web security', 'API security', 'ethical hacking', 'security researcher', 'Tunisia'],
   authors: [{ name: 'Saleh Eddine Touil' }],
   creator: 'Saleh Eddine Touil',
   publisher: 'Saleh Eddine Touil',
@@ -21,16 +21,16 @@ export const metadata = {
     apple: '/favicon.svg',
   },
   openGraph: {
-    title: 'Saleh Eddine Touil | Cybersecurity Specialist & CTF Champion',
-    description: 'Elite cybersecurity professional specializing in penetration testing, secure development, and CTF competitions. 1st Place DarkNets CTF 3.0 • Top 8 Securinets Finals',
+    title: 'Saleh Eddine Touil | Bug Bounty Hunter & CPTS',
+    description: 'Full-time bug bounty hunter on Intigriti focused on Web and API security, access control, authentication logic, recon, and exploit chaining.',
     url: 'https://www.saleheddinetouil.tech',
     siteName: 'Saleh Eddine Touil Portfolio',
     images: [
       {
-        url: '/images/me.jpg',
+        url: '/images/me.JPG',
         width: 1200,
         height: 630,
-        alt: 'Saleh Eddine Touil - Cybersecurity Specialist',
+        alt: 'Saleh Eddine Touil - Bug Bounty Hunter',
       },
     ],
     locale: 'en_US',
@@ -38,9 +38,9 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Saleh Eddine Touil | Cybersecurity Specialist & CTF Champion',
-    description: 'Elite cybersecurity professional • CTF Champion • Penetration Tester • Full-Stack Developer',
-    images: ['/images/me.jpg'],
+    title: 'Saleh Eddine Touil | Bug Bounty Hunter & CPTS',
+    description: 'Full-time Intigriti bug bounty hunter • CPTS • Web and API security • CTF player',
+    images: ['/images/me.JPG'],
   },
   robots: {
     index: true,

@@ -77,13 +77,13 @@ export default function Home() {
       />
       <div className={styles.sliderContainer}>
         <div ref={slider} className={styles.slider}>
-          <p ref={firstText}>SECURITY ENGINEER • CTF CHAMPION • AI INTEGRATOR • SOC ANALYST —</p>
-          <p ref={secondText}>SECURITY ENGINEER • CTF CHAMPION • AI INTEGRATOR • SOC ANALYST —</p>
+          <p ref={firstText}>BUG BOUNTY HUNTER • CPTS • CTF PLAYER • APPSEC RESEARCHER —</p>
+          <p ref={secondText}>BUG BOUNTY HUNTER • CPTS • CTF PLAYER • APPSEC RESEARCHER —</p>
         </div>
       </div>
       <div data-scroll data-scroll-speed={0.1} className={styles.description}>
-        <p>ISET&apos;COM Tunis — ICT Engineering</p>
-        <p>Adversarial ML • Web Security • Threat Hunting</p>
+        <p>Full-time bug bounty hunter on Intigriti</p>
+        <p>Web & API Security • IDOR/BOLA • Auth Logic • Recon</p>
       </div>
     </motion.main>
   )

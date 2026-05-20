@@ -5,7 +5,7 @@ import { slideUp, opacity } from './animation';
 import Rounded from '../../common/RoundedButton';
 export default function Index() {
 
-    const phrase = "Results-driven Security Engineer & CTF Champion pursuing ICT at ISET'COM Tunis";
+    const phrase = "Full-time Bug Bounty Hunter focused on Web & API Security";
     const description = useRef(null);
     const isInView = useInView(description)
     return (
@@ -19,11 +19,11 @@ export default function Index() {
                 }
                 </p>
                 <motion.p variants={opacity} animate={isInView ? "open" : "closed"}>
-                    Certified cybersecurity professional with hands-on experience in AI integration, SOC operations, and red-team testing. Passionate about securing networks, solving CTF challenges, and building innovative solutions that bridge security with emerging technologies.
+                    I hunt vulnerabilities full-time on Intigriti, with accepted reports from medium to critical impact. My work centers on recon, attack surface mapping, access control flaws, authentication logic, JWT issues, GraphQL testing, and chaining small weaknesses into reports that matter.
                     <br/><br/>
-                    <strong>Research Interests:</strong> Adversarial Machine Learning (evasion/robustness/privacy) • Web & API Security • Threat Hunting and Attack Reconstruction • Secure AI Integration • Log Analysis and Correlation
+                    <strong>Current focus:</strong> Bug bounty methodology • Web & API Security • BOLA/IDOR • JWT and auth bypasses • GraphQL attack surface • Secure AI Integration
                     <br/><br/>
-                    <strong>Certifications:</strong> CCNA Enterprise Networking • CCEP (Red Team Leaders) • ISC2 Candidate • API Security Fundamentals • Kubernetes & Zero Trust (Linux Foundation)
+                    <strong>Certifications:</strong> HTB Certified Penetration Testing Specialist (CPTS) • CCNA Enterprise Networking • API Security Fundamentals • Zero Trust • Kubernetes • Cybersecurity Fundamentals
                 </motion.p>
                 <div data-scroll data-scroll-speed={0.1}>
                     <Rounded className={styles.button}>

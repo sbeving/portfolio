@@ -5,6 +5,27 @@ import { useRef } from 'react';
 
 const experiences = [
   {
+    title: "Bug Bounty Hunter",
+    company: "Intigriti",
+    location: "Tunis, Tunisia (Remote)",
+    period: "Jan 2026 - Present",
+    highlights: [
+      "Full-time vulnerability research across public and private programs, with accepted findings from medium to critical impact",
+      "Focused on recon, attack surface mapping, access control, authentication logic, JWT issues, GraphQL, and exploit chaining",
+      "Turn duplicate and low-severity findings into methodology improvements by searching for untested variants and stronger impact"
+    ]
+  },
+  {
+    title: "Cyber Security Intern",
+    company: "KEYSTONE Group",
+    location: "Tunis, Tunisia (Hybrid)",
+    period: "Feb 2026 - Present",
+    highlights: [
+      "Contribute to security assessment work with a red-team and application security mindset",
+      "Document vulnerabilities clearly with reproduction steps, impact, and remediation guidance"
+    ]
+  },
+  {
     title: "AI Integration & Web Security Engineer",
     company: "Megapc",
     location: "Tunis, Tunisia (On-site)",
@@ -29,10 +50,10 @@ const experiences = [
     title: "Cybersecurity Intern",
     company: "KEYSTONE Group",
     location: "Tunis, Tunisia",
-    period: "Jan 2025 – Feb 2025",
+    period: "Jan 2025 - Feb 2025",
     highlights: [
       "Supported security assessments and red-team style testing",
-      "Vulnerability discovery, documentation, and remediation focus"
+      "Practiced vulnerability discovery, documentation, and remediation-focused reporting"
     ]
   },/*
   {
@@ -50,7 +71,7 @@ const experiences = [
     title: "Web Developer & Project Manager",
     company: "Petshouse.tn",
     location: "Tunisia (Hybrid)",
-    period: "Jan 2024 – Sep 2024",
+    period: "Feb 2024 - Present",
     highlights: [
       "Specialized in Odoo web development for invoicing, e-commerce, and shop management (MVP pattern)",
       "Reduced manual errors by 20% through automated invoicing features",

@@ -23,7 +23,7 @@ export default function Index() {
                             <Image 
                             fill={true}
                             alt={"profile"}
-                            src={`/images/me.jpg`}
+                            src={`/images/me.JPG`}
                             />
                         </div>
                         <h2>Let&apos;s build</h2>
@@ -80,6 +80,11 @@ export default function Index() {
                                 </a>
                             </Magnetic>
                         </span>
+                        <Magnetic>
+                            <a href="https://app.intigriti.com/profile/sbeve" target="_blank" rel="noopener noreferrer" style={{textDecoration: 'none', color: 'inherit'}}>
+                                <p>Intigriti</p>
+                            </a>
+                        </Magnetic>
                         <Magnetic>
                             <a href="https://github.com/sbeving" target="_blank" rel="noopener noreferrer" style={{textDecoration: 'none', color: 'inherit'}}>
                                 <p>GitHub</p>
