@@ -30,7 +30,7 @@ export default function Index() {
                     </span>
                     <h2>something secure</h2>
                     <motion.div style={{x}} className={styles.buttonContainer}>
-                        <Rounded  backgroundColor={"#8b5cf6"} className={styles.button}>
+                        <Rounded  backgroundColor={"#22c55e"} className={styles.button}>
                             <p>Get In Touch</p>
                         </Rounded>
                     </motion.div>

@@ -123,9 +123,9 @@ export default function NotFound() {
           className={styles.errorCode}
           animate={{ 
             textShadow: [
-              "0 0 10px #8b5cf6, 0 0 20px #8b5cf6",
+              "0 0 10px #22c55e, 0 0 20px #22c55e",
               "0 0 15px #06b6d4, 0 0 30px #06b6d4",
-              "0 0 10px #8b5cf6, 0 0 20px #8b5cf6"
+              "0 0 10px #22c55e, 0 0 20px #22c55e"
             ]
           }}
           transition={{ duration: 0.5, repeat: Infinity }}

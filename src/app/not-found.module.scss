@@ -23,7 +23,7 @@
 .matrixChar {
   position: absolute;
   top: 0;
-  color: #8b5cf6;
+  color: #22c55e;
   opacity: 0.3;
   font-size: 1rem;
   font-family: monospace;
@@ -41,11 +41,11 @@
 .errorCode {
   font-size: clamp(6rem, 20vw, 12rem);
   font-weight: 900;
-  color: #8b5cf6;
+  color: #22c55e;
   margin: 0;
   line-height: 1;
   font-family: 'JetBrains Mono', monospace;
-  text-shadow: 0 0 10px #8b5cf6, 0 0 20px #8b5cf6;
+  text-shadow: 0 0 10px #22c55e, 0 0 20px #22c55e;
   
   &::before,
   &::after {
@@ -82,9 +82,9 @@
   margin: 2rem auto;
   max-width: 450px;
   box-shadow: 
-    0 0 0 1px rgba(139, 92, 246, 0.2),
+    0 0 0 1px rgba(34, 197, 94, 0.2),
     0 20px 60px -10px rgba(0, 0, 0, 0.5),
-    0 0 30px rgba(139, 92, 246, 0.1);
+    0 0 30px rgba(34, 197, 94, 0.1);
 }
 
 .terminalHeader {
@@ -121,12 +121,12 @@
 }
 
 .prompt {
-  color: #8b5cf6;
+  color: #22c55e;
   margin-right: 0.5rem;
 }
 
 .cursor {
-  color: #8b5cf6;
+  color: #22c55e;
   animation: blink 1s infinite;
 }
 
@@ -139,18 +139,18 @@
   display: inline-block;
   margin-top: 2rem;
   padding: 1rem 2.5rem;
-  background: linear-gradient(135deg, #8b5cf6 0%, #06b6d4 100%);
+  background: linear-gradient(135deg, #22c55e 0%, #06b6d4 100%);
   color: #fff;
   text-decoration: none;
   border-radius: 50px;
   font-weight: 600;
   font-size: 1.1rem;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 20px rgba(139, 92, 246, 0.4);
+  box-shadow: 0 4px 20px rgba(34, 197, 94, 0.4);
   
   &:hover {
     transform: translateY(-2px);
-    box-shadow: 0 6px 30px rgba(139, 92, 246, 0.6);
+    box-shadow: 0 6px 30px rgba(34, 197, 94, 0.6);
   }
   
   span {
@@ -166,7 +166,7 @@
 }
 
 .redirect {
-  color: #8b5cf6;
+  color: #22c55e;
   font-size: 1rem;
   margin-top: 2rem;
   font-weight: 500;
@@ -182,27 +182,27 @@
 @keyframes glitch {
   0% {
     transform: translate(0);
-    text-shadow: 0 0 10px #8b5cf6;
+    text-shadow: 0 0 10px #22c55e;
   }
   20% {
     transform: translate(-2px, 2px);
-    text-shadow: -2px 0 #06b6d4, 2px 0 #8b5cf6;
+    text-shadow: -2px 0 #06b6d4, 2px 0 #22c55e;
   }
   40% {
     transform: translate(-2px, -2px);
-    text-shadow: 2px 0 #06b6d4, -2px 0 #8b5cf6;
+    text-shadow: 2px 0 #06b6d4, -2px 0 #22c55e;
   }
   60% {
     transform: translate(2px, 2px);
-    text-shadow: -2px 0 #06b6d4, 2px 0 #8b5cf6;
+    text-shadow: -2px 0 #06b6d4, 2px 0 #22c55e;
   }
   80% {
     transform: translate(2px, -2px);
-    text-shadow: 2px 0 #06b6d4, -2px 0 #8b5cf6;
+    text-shadow: 2px 0 #06b6d4, -2px 0 #22c55e;
   }
   100% {
     transform: translate(0);
-    text-shadow: 0 0 10px #8b5cf6;
+    text-shadow: 0 0 10px #22c55e;
   }
 }
 

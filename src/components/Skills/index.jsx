@@ -1,5 +1,6 @@
 'use client';
 import styles from './style.module.scss';
+import Image from 'next/image';
 import { useInView, motion } from 'framer-motion';
 import { useRef } from 'react';
 
@@ -35,6 +36,49 @@ const bugBountyMilestones = [
   { title: "Medium-Critical", event: "Accepted reports", note: "Web and API impact range" },
   { title: "VDP", event: "Digital Flanders", note: "Improper access control confirmed via YesWeHack" },
   { title: "Research Loop", event: "Duplicates to variants", note: "Variant hunting, impact refinement, better recon" }
+];
+
+const intigritiBadges = [
+  {
+    title: "Program Top 1",
+    href: "https://app.intigriti.com/profile/sbeve?openAchievement=program_top_one",
+    image: "/images/intigriti-badges/program-top-one.webp"
+  },
+  {
+    title: "Program Top 10",
+    href: "https://app.intigriti.com/profile/sbeve?openAchievement=program_top_ten",
+    image: "/images/intigriti-badges/program-top-ten.webp"
+  },
+  {
+    title: "10 Valid Submissions",
+    href: "https://app.intigriti.com/profile/sbeve?openAchievement=ten_valid_submission",
+    image: "/images/intigriti-badges/ten-valid-submission.webp"
+  },
+  {
+    title: "Exceptional Severity",
+    href: "https://app.intigriti.com/profile/sbeve?openAchievement=exceptional_severity",
+    image: "/images/intigriti-badges/exceptional-severity.webp"
+  },
+  {
+    title: "Critical Severity",
+    href: "https://app.intigriti.com/profile/sbeve?openAchievement=critical_severity",
+    image: "/images/intigriti-badges/critical-severity.webp"
+  },
+  {
+    title: "High Severity",
+    href: "https://app.intigriti.com/profile/sbeve?openAchievement=high_severity",
+    image: "/images/intigriti-badges/high-severity.webp"
+  },
+  {
+    title: "Medium Severity",
+    href: "https://app.intigriti.com/profile/sbeve?openAchievement=medium_severity",
+    image: "/images/intigriti-badges/medium-severity.webp"
+  },
+  {
+    title: "Low Severity",
+    href: "https://app.intigriti.com/profile/sbeve?openAchievement=low_severity",
+    image: "/images/intigriti-badges/low-severity.webp"
+  }
 ];
 
 const teamAchievements = [
@@ -105,6 +149,33 @@ export default function Skills() {
                 <span className={styles.eventNote}>{achievement.note}</span>
               </motion.div>
             ))}
+          </div>
+          <div className={styles.badgePanel}>
+            <div className={styles.badgeCopy}>
+              <span>Intigriti evidence</span>
+              <h3>Achievement badges recruiters can verify.</h3>
+              <p>Program ranking and severity badges linked directly to the public Intigriti profile.</p>
+              <a href="https://app.intigriti.com/profile/sbeve" target="_blank" rel="noopener noreferrer">
+                Open full profile
+              </a>
+            </div>
+            <div className={styles.badgeGrid}>
+              {intigritiBadges.map((badge, index) => (
+                <motion.a
+                  href={badge.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={styles.badgeCard}
+                  key={badge.title}
+                  initial={{ opacity: 0, y: 18 }}
+                  animate={isInView ? { opacity: 1, y: 0 } : {}}
+                  transition={{ duration: 0.4, delay: 0.18 + index * 0.04 }}
+                >
+                  <Image src={badge.image} alt={`${badge.title} Intigriti badge`} width={92} height={92} />
+                  <span>{badge.title}</span>
+                </motion.a>
+              ))}
+            </div>
           </div>
         </motion.div>
 

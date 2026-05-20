@@ -60,7 +60,7 @@
         font-weight: 700;
         font-family: 'Inter', system-ui, sans-serif;
         color: #fafafa;
-        letter-spacing: -0.03em;
+        letter-spacing: 0;
         background: linear-gradient(135deg, #fafafa 0%, #a1a1aa 100%);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
@@ -92,7 +92,7 @@
           position: absolute;
           inset: -1px;
           border-radius: 50%;
-          background: linear-gradient(135deg, #8b5cf6 0%, #06b6d4 100%);
+          background: linear-gradient(135deg, #22c55e 0%, #06b6d4 100%);
           opacity: 0;
           transition: opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1);
           z-index: -1;
@@ -165,7 +165,7 @@
             content: '';
             width: 0%;
             height: 1px;
-            background: #8b5cf6;
+            background: #22c55e;
             display: block;
             margin-top: 2px;
             position: relative;

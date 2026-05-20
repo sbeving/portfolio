@@ -6,6 +6,11 @@ import Rounded from '../../common/RoundedButton';
 export default function Index() {
 
     const phrase = "Full-time Bug Bounty Hunter focused on Web & API Security";
+    const methods = [
+        { label: "Recon", value: "Map exposed surfaces, hidden APIs, roles, and trust boundaries." },
+        { label: "Exploit", value: "Test access control, auth logic, JWT, GraphQL, and business workflows." },
+        { label: "Report", value: "Write clear impact, reproduction, evidence, and remediation guidance." }
+    ];
     const description = useRef(null);
     const isInView = useInView(description)
     return (
@@ -25,6 +30,14 @@ export default function Index() {
                     <br/><br/>
                     <strong>Certifications:</strong> HTB Certified Penetration Testing Specialist (CPTS) • CCNA Enterprise Networking • API Security Fundamentals • Zero Trust • Kubernetes • Cybersecurity Fundamentals
                 </motion.p>
+                <motion.div className={styles.methodGrid} variants={opacity} animate={isInView ? "open" : "closed"}>
+                    {methods.map((item) => (
+                        <div className={styles.methodCard} key={item.label}>
+                            <span>{item.label}</span>
+                            <p>{item.value}</p>
+                        </div>
+                    ))}
+                </motion.div>
                 <div data-scroll data-scroll-speed={0.1}>
                     <Rounded className={styles.button}>
                         <p>About me</p>
