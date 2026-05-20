@@ -51,7 +51,13 @@ const soloAchievements = [
 ];
 
 const certifications = [
-  { name: "Hack The Box Certified Penetration Testing Specialist (CPTS)", issuer: "Hack The Box", year: "2026" },
+  {
+    name: "Hack The Box Certified Penetration Testing Specialist (CPTS)",
+    issuer: "Hack The Box",
+    year: "2026",
+    badgeUrl: "https://academy.hackthebox.com/achievement/badge/6a2494e3-2792-11f1-9254-bea50ffe6cb4",
+    certificateUrl: "/cpts-certificate.pdf"
+  },
   { name: "TOEIC", issuer: "ETS", year: "2025" },
   { name: "Certified Cybersecurity Educator Professional (CCEP)", issuer: "Red Team Leaders", year: "2025" },
   { name: "CCNA: Enterprise Networking, Security, and Automation", issuer: "Cisco", year: "2025" },
@@ -189,6 +195,20 @@ export default function Skills() {
                   <span className={styles.certIssuer}>{cert.issuer}</span>
                   <span className={styles.certYear}>{cert.year}</span>
                 </div>
+                {(cert.badgeUrl || cert.certificateUrl) && (
+                  <div className={styles.certLinks}>
+                    {cert.badgeUrl && (
+                      <a href={cert.badgeUrl} target="_blank" rel="noopener noreferrer">
+                        View badge
+                      </a>
+                    )}
+                    {cert.certificateUrl && (
+                      <a href={cert.certificateUrl} target="_blank" rel="noopener noreferrer">
+                        Certificate
+                      </a>
+                    )}
+                  </div>
+                )}
               </motion.div>
             ))}
           </div>
