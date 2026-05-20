@@ -4,7 +4,7 @@
   max-width: 100vw;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   height: 100vh;
   height: 100dvh; /* Dynamic viewport height for iOS Safari */
   min-height: -webkit-fill-available;
@@ -298,7 +298,7 @@
   // Mobile
   @media (max-width: 768px) {
     height: 100svh; /* Small viewport height - excludes address bar */
-    min-height: 500px; /* Minimum height fallback */
+    min-height: 820px; /* room for proof board and CTAs */
     
     .heroPanel {
       width: calc(100% - 40px);
