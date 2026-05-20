@@ -58,7 +58,13 @@ const certifications = [
     badgeUrl: "https://academy.hackthebox.com/achievement/badge/6a2494e3-2792-11f1-9254-bea50ffe6cb4",
     certificateUrl: "/cpts-certificate.pdf"
   },
-  { name: "TOEIC", issuer: "ETS", year: "2025" },
+  {
+    name: "TOEIC",
+    issuer: "ETS",
+    year: "2025",
+    badgeUrl: "https://media.licdn.com/dms/image/v2/D4D2DAQFfBrjUQpWINA/profile-treasury-image-shrink_800_800/B4DZ0gxD2oIoAc-/0/1774371227380?e=1779883200&v=beta&t=I9_sIdlcrQp5D2Egln2EbvcqDi1c7sM043Jk3MFZ4Ew",
+    certificateUrl: "/toeic.jpeg"
+  },
   { name: "Certified Cybersecurity Educator Professional (CCEP)", issuer: "Red Team Leaders", year: "2025" },
   { name: "CCNA: Enterprise Networking, Security, and Automation", issuer: "Cisco", year: "2025" },
   { name: "CCNA: Introduction to Networks", issuer: "Cisco", year: "2025" },

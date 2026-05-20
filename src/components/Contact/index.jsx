@@ -59,8 +59,12 @@ export default function Index() {
                     <div>
                         <span>
                             <h3>Education</h3>
-                            <p>ISET&apos;COM Tunis</p>
-                            <p className={styles.subInfo}>Bachelor ICT • Expected 2026</p>
+                            <p>Institut Supérieur des Etudes Technologiques en Communications de Tunis</p>
+                            <p className={styles.subInfo}>Bachelor&apos;s degree, Computer Systems Networking and Telecommunications • Sep 2021 - Present</p>
+                            <p>Lycée Soukra</p>
+                            <p className={styles.subInfo}>Baccalauréat, Informatics • Sep 2017 - Jun 2021</p>
+                            <p>GOMYCODE</p>
+                            <p className={styles.subInfo}>Bootcamp, Cybersecurity • Jan 2022 - May 2022</p>
                         </span>
                         <span>
                             <h3>Location</h3>

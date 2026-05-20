@@ -199,7 +199,8 @@
         span {
           display: flex;
           flex-direction: column;
-          gap: 12px;
+          gap: 8px;
+          max-width: 420px;
         }
 
         h3 {
