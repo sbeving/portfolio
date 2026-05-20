@@ -6,6 +6,7 @@ import Preloader from '../components/Preloader';
 import Landing from '../components/Landing';
 import Projects from '../components/Projects';
 import Description from '../components/Description';
+import IntigritiProof from '../components/IntigritiProof';
 import Skills from '../components/Skills';
 import Experience from '../components/Experience';
 import SlidingImages from '../components/SlidingImages';
@@ -49,6 +50,7 @@ export default function Home() {
       </AnimatePresence>
       <Landing />
       <Description />
+      <IntigritiProof />
       <Skills />
       <Experience />
       <Projects />

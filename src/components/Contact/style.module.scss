@@ -120,7 +120,10 @@
       svg {
         position: absolute;
         top: 30%;
-        left: 100%;
+        right: 0;
+        transform: translateX(50%);
+        max-width: 28px;
+        pointer-events: none;
       }
     }
 
@@ -269,6 +272,10 @@
           bottom: auto;
           right: auto;
           margin-top: 32px;
+        }
+
+        svg {
+          display: none;
         }
       }
 

@@ -8,10 +8,15 @@
 
 html {
   scroll-behavior: smooth;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 body{
     margin: 0px;
+    width: 100%;
+    max-width: 100%;
     overflow-x: hidden;
     overflow-y: auto;
     cursor: default;
@@ -23,6 +28,13 @@ body{
     text-rendering: optimizeLegibility;
     /* iOS Safari scroll fix */
     -webkit-overflow-scrolling: touch;
+}
+
+img,
+svg,
+video,
+canvas {
+    max-width: 100%;
 }
 
 /* Premium Design System - Inspired by Linear/Vercel/Stripe */
