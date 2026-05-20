@@ -2,6 +2,7 @@
   padding: 120px 0;
   background: #09090b;
   position: relative;
+  overflow: clip;
 
   .body {
     max-width: 1000px;
@@ -173,7 +174,7 @@
     }
 
     .timeline {
-      padding-left: 32px;
+      padding-left: 20px;
 
       &:before {
         left: 0;
@@ -181,7 +182,7 @@
     }
 
     .timelineDot {
-      left: -36px;
+      left: -24px;
       width: 6px;
       height: 6px;
 
@@ -230,7 +231,7 @@
     }
 
     .timeline {
-      padding-left: 24px;
+      padding-left: 14px;
     }
 
     .timelineItem {
@@ -238,7 +239,7 @@
     }
 
     .timelineDot {
-      left: -28px;
+      left: -18px;
     }
 
     .timelineContent {

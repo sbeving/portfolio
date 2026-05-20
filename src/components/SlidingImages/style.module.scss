@@ -3,6 +3,7 @@
   flex-direction: column;
   gap: 3vw;
   position: relative;
+  overflow: clip;
   margin-top: clamp(100px, 18vh, 200px);
   background-color: #09090b;
   z-index: 1;
@@ -11,8 +12,9 @@
     display: flex;
     position: relative;
     gap: 3vw;
-    width: 120vw;
-    left: -10vw;
+    width: min(1200px, 100%);
+    margin: 0 auto;
+    left: auto;
 
     .project {
       width: 25%;
@@ -43,8 +45,8 @@
 
     .circle {
       height: 1550%;
-      width: 120%;
-      left: -10%;
+      width: 100%;
+      left: 0;
       border-radius: 0 0 50% 50%;
       background-color: #09090b;
       z-index: 1;

@@ -122,8 +122,8 @@ export default function Experience() {
             <motion.div
               key={index}
               className={styles.timelineItem}
-              initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
-              animate={isInView ? { opacity: 1, x: 0 } : {}}
+              initial={{ opacity: 0, y: 24 }}
+              animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: index * 0.15 }}
             >
               <div className={styles.timelineContent}>
