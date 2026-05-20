@@ -60,7 +60,7 @@ export default function Index() {
                         <span>
                             <h3>Education</h3>
                             <p>Institut Supérieur des Etudes Technologiques en Communications de Tunis</p>
-                            <p className={styles.subInfo}>Bachelor&apos;s degree, Computer Systems Networking and Telecommunications • Sep 2021 - Present</p>
+                            <p className={styles.subInfo}>Bachelor ICT, Cyber Security specialty • Sep 2021 - Present</p>
                             <p>Lycée Soukra</p>
                             <p className={styles.subInfo}>Baccalauréat, Informatics • Sep 2017 - Jun 2021</p>
                             <p>GOMYCODE</p>
@@ -72,7 +72,7 @@ export default function Index() {
                         </span>
                         <span>
                             <h3>Languages</h3>
-                            <p className={styles.subInfo}>Arabic (Native) • English (B2) • French (B1)</p>
+                            <p className={styles.subInfo}>Arabic (Native) • English (B2) • French (B2)</p>
                         </span>
                     </div>
                     <div>
