@@ -41,13 +41,13 @@ const skills = [
 const teamAchievements = [
   { title: "1st Place", event: "GCUP v2 CTF", note: "Second consecutive win - Institut français de Tunisie, organized by Securinets" },
   { title: "1st Place", event: "GCUP v1 CTF", note: "Institut français de Tunisie, first edition" },
-  { title: "1st Place", event: "Darkest Hour CTF", note: "Securinets INSAT" },
   { title: "1st Place", event: "Darkest Hour CTF Eclipse Edition", note: "Securinets INSAT" },
   { title: "1st Place", event: "DarkNets 3.0 CTF", note: "National Competition 2025" },
   { title: "1st Place", event: "Cr4ck0ut 2.0 CTF", note: "Securinets SMU" },
   { title: "2nd Place", event: "CTF KAREEM", note: "Securinets TEK-UP - 11 first bloods" },
   { title: "2nd Place", event: "Cybermaze CTF", note: "Engineers Spark - ISET'COM" },
   { title: "Top 8", event: "Securinets INSAT International Finals", note: "Among 600+ teams, MENA and beyond" },
+  { title: "8th Place", event: "Darkest Hour CTF", note: "Securinets INSAT - out of 70 teams" },
 ];
 
 const certifications = [
