@@ -5,12 +5,20 @@ import { useRef } from 'react';
 
 const skills = [
   {
+    category: "Offensive Security",
+    items: ["Penetration Testing", "Active Directory Attacks", "Privilege Escalation", "Lateral Movement", "Pivoting & Tunneling", "Post-Exploitation", "Kerberoasting", "Password Attacks", "Network Enumeration", "Threat Modeling"]
+  },
+  {
     category: "Bug Bounty & AppSec",
     items: ["BOLA/IDOR", "Auth Bypass", "JWT Testing", "GraphQL", "Business Logic", "Recon", "API Security", "Access Control", "Responsible Disclosure"]
   },
   {
     category: "Security Tools",
-    items: ["Burp Suite", "Caido", "Nmap", "Wireshark", "Metasploit", "OWASP ZAP", "Kali Linux", "Snort", "Splunk", "Ghidra"]
+    items: ["Burp Suite", "Caido", "Nmap", "Wireshark", "Metasploit", "OWASP ZAP", "Kali Linux", "BloodHound", "Snort", "Splunk", "Ghidra"]
+  },
+  {
+    category: "Reporting & Defence",
+    items: ["Vulnerability Reporting", "Impact & Severity Rating", "CVSS", "Remediation Guidance", "SOC Triage", "Log Analysis", "Incident Documentation", "Secure Code Review"]
   },
   {
     category: "Programming Languages",
@@ -32,7 +40,7 @@ const skills = [
 
 const bugBountyMilestones = [
   { title: "Part-time", event: "Intigriti Hunter", note: "Active since Jan 2026" },
-  { title: "Medium-Critical", event: "Accepted reports", note: "Web and API impact range" },
+  { title: "Low-Exceptional", event: "Accepted reports", note: "Web and API impact range" },
   { title: "VDP", event: "Digital Flanders", note: "Improper access control confirmed via YesWeHack" },
   { title: "Research Loop", event: "Duplicates to variants", note: "Variant hunting, impact refinement, better recon" }
 ];

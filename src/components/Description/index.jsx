@@ -2,7 +2,6 @@ import styles from './style.module.scss';
 import { useInView, motion } from 'framer-motion';
 import { useRef } from 'react';
 import { slideUp, opacity } from './animation';
-import Rounded from '../../common/RoundedButton';
 export default function Index() {
 
     const phrase = "Part-time Bug Bounty Hunter focused on Web & API Security";
@@ -38,11 +37,6 @@ export default function Index() {
                         </div>
                     ))}
                 </motion.div>
-                <div data-scroll data-scroll-speed={0.1}>
-                    <Rounded className={styles.button}>
-                        <p>About me</p>
-                    </Rounded>
-                </div>
             </div>
         </div>
     )
