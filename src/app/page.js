@@ -17,10 +17,12 @@ export default function Home() {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect( () => {
-    (
+    let locomotiveScroll
+    let timer
+    ;(
       async () => {
           const LocomotiveScroll = (await import('locomotive-scroll')).default
-          const locomotiveScroll = new LocomotiveScroll({
+          locomotiveScroll = new LocomotiveScroll({
             lenisOptions: {
               wrapper: window,
               content: document.documentElement,
@@ -34,13 +36,18 @@ export default function Home() {
             }
           });
 
-          setTimeout( () => {
+          timer = setTimeout( () => {
             setIsLoading(false);
             document.body.style.cursor = 'default'
             window.scrollTo(0,0);
-          }, 700)
+          }, 1200)
       }
     )()
+
+    return () => {
+      clearTimeout(timer)
+      locomotiveScroll?.destroy?.()
+    }
   }, [])
 
   return (

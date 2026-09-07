@@ -10,7 +10,7 @@ const experiences = [
     location: "Tunis, Tunisia (Remote)",
     period: "Jan 2026 - Present",
     highlights: [
-      "Full-time vulnerability research across public and private programs, with accepted findings from medium to critical impact",
+      "Vulnerability research across public and private programs, with accepted findings from low to exceptional impact",
       "Focused on recon, attack surface mapping, access control, authentication logic, JWT issues, GraphQL, and exploit chaining",
       "Turn duplicate and low-severity findings into methodology improvements by searching for untested variants and stronger impact"
     ]

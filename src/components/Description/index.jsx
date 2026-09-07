@@ -5,7 +5,7 @@ import { slideUp, opacity } from './animation';
 import Rounded from '../../common/RoundedButton';
 export default function Index() {
 
-    const phrase = "Full-time Bug Bounty Hunter focused on Web & API Security";
+    const phrase = "Part-time Bug Bounty Hunter focused on Web & API Security";
     const methods = [
         { label: "Recon", value: "Map exposed surfaces, hidden APIs, roles, and trust boundaries." },
         { label: "Exploit", value: "Test access control, auth logic, JWT, GraphQL, and business workflows." },
@@ -24,7 +24,7 @@ export default function Index() {
                 }
                 </p>
                 <motion.p variants={opacity} animate={isInView ? "open" : "closed"}>
-                    I hunt vulnerabilities full-time on Intigriti, with accepted reports from medium to critical impact. My work centers on recon, attack surface mapping, access control flaws, authentication logic, JWT issues, GraphQL testing, and chaining small weaknesses into reports that matter.
+                    Part-time bug bounty hunter with 30+ accepted reports, low to exceptional severity. Recon, access control, authentication logic, JWT, GraphQL, and chaining small weaknesses into reports that matter.
                     <br/><br/>
                     <strong>Current focus:</strong> Bug bounty methodology • Web & API Security • BOLA/IDOR • JWT and auth bypasses • GraphQL attack surface • Secure AI Integration
                     <br/><br/>

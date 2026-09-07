@@ -3,7 +3,7 @@ import Header from '../components/Header';
 
 export const metadata = {
   title: 'Saleh Eddine Touil | Bug Bounty Hunter & CPTS',
-  description: 'Full-time bug bounty hunter on Intigriti focused on Web and API security, access control, authentication logic, recon, exploit chaining, and CTF competition.',
+  description: 'Part-time bug bounty hunter. Web and API security, access control, authentication logic, recon and exploit chaining. CPTS certified.',
   keywords: ['bug bounty', 'intigriti', 'cybersecurity', 'penetration testing', 'CPTS', 'CTF', 'web security', 'API security', 'ethical hacking', 'security researcher', 'Tunisia'],
   authors: [{ name: 'Saleh Eddine Touil' }],
   creator: 'Saleh Eddine Touil',
@@ -19,12 +19,12 @@ export const metadata = {
   },
   openGraph: {
     title: 'Saleh Eddine Touil | Bug Bounty Hunter & CPTS',
-    description: 'Full-time bug bounty hunter on Intigriti focused on Web and API security, access control, authentication logic, recon, and exploit chaining.',
+    description: 'Part-time bug bounty hunter. Web and API security, access control, authentication logic, recon and exploit chaining. CPTS certified.',
     url: 'https://www.saleheddinetouil.tech',
     siteName: 'Saleh Eddine Touil Portfolio',
     images: [
       {
-        url: '/images/me.JPG',
+        url: '/images/og-cover.jpg',
         width: 1200,
         height: 630,
         alt: 'Saleh Eddine Touil - Bug Bounty Hunter',
@@ -36,8 +36,8 @@ export const metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Saleh Eddine Touil | Bug Bounty Hunter & CPTS',
-    description: 'Full-time Intigriti bug bounty hunter • CPTS • Web and API security • CTF player',
-    images: ['/images/me.JPG'],
+    description: 'Part-time bug bounty hunter • CPTS • Web and API security • CTF player',
+    images: ['/images/og-cover.jpg'],
   },
   robots: {
     index: true,

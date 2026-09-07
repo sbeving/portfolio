@@ -31,7 +31,7 @@ const skills = [
 ];
 
 const bugBountyMilestones = [
-  { title: "Full-time", event: "Intigriti Hunter", note: "Active since Jan 2026" },
+  { title: "Part-time", event: "Intigriti Hunter", note: "Active since Jan 2026" },
   { title: "Medium-Critical", event: "Accepted reports", note: "Web and API impact range" },
   { title: "VDP", event: "Digital Flanders", note: "Improper access control confirmed via YesWeHack" },
   { title: "Research Loop", event: "Duplicates to variants", note: "Variant hunting, impact refinement, better recon" }

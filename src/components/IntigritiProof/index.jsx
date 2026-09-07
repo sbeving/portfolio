@@ -16,7 +16,7 @@ const badges = [
 
 const stats = [
   { label: 'Platform', value: 'Intigriti' },
-  { label: 'Status', value: 'Full-time hunter' },
+  { label: 'Status', value: 'Part-time hunter' },
   { label: 'Impact range', value: 'Low to exceptional' },
   { label: 'Signal', value: 'Ranked programs' }
 ];
@@ -35,11 +35,8 @@ export default function IntigritiProof() {
           transition={{ duration: 0.55 }}
         >
           <span className={styles.eyebrow}>intigriti.profile/sbeve</span>
-          <h2>Validated impact, not portfolio theater.</h2>
-          <p>
-            A recruiter should not have to guess what I do. These achievements map directly to active bug bounty work:
-            ranked program performance, valid submissions, and severity-backed findings.
-          </p>
+          <h2>Intigriti</h2>
+          <p>Part-time bug bounty hunter. 30+ valid reports, low to exceptional severity.</p>
           <div className={styles.stats}>
             {stats.map((stat) => (
               <div key={stat.label}>

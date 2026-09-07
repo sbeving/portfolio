@@ -121,3 +121,17 @@ a:focus-visible {
         transition-duration: 0.01ms !important;
     }
 }
+
+/* Respect the OS "reduce motion" setting: keep layout and opacity, drop the
+   movement. Framer Motion, GSAP and Locomotive all animate inline styles or
+   transforms, so this has to be forced. */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}

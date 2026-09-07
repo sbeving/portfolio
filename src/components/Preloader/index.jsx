@@ -16,9 +16,12 @@ export default function Index() {
 
     useEffect( () => {
         if(index == words.length - 1) return;
-        setTimeout( () => {
+        // Must finish inside the window page.js keeps the preloader mounted for,
+        // otherwise the later words never render at all.
+        const id = setTimeout( () => {
             setIndex(index + 1)
-        }, index == 0 ? 2000 : 250)
+        }, index == 0 ? 300 : 130)
+        return () => clearTimeout(id)
     }, [index])
 
     const initialPath = `M0 0 L${dimension.width} 0 L${dimension.width} ${dimension.height} Q${dimension.width/2} ${dimension.height + 300} 0 ${dimension.height}  L0 0`
