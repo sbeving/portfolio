@@ -1,0 +1,26 @@
+[
+  {
+    "title": "Breaking Out of a jsonb Literal",
+    "description": "A filter built a PostgreSQL jsonb array by pasting user input into a JSON string, so the escape was out of a JSON document and a cast, and a row count was the only thing that ever answered back.",
+    "link": "https://blog.saleheddinetouil.tech/posts/bugbounty-jsonb-containment-blind-sqli/",
+    "slug": "bugbounty-jsonb-containment-blind-sqli",
+    "image": "https://blog.saleheddinetouil.tech/covers/bugbounty-jsonb-containment-blind-sqli.jpg",
+    "date": "6 Sept 2026"
+  },
+  {
+    "title": "The Second Form Nobody Reviewed",
+    "description": "A support contact form was hardened against stored HTML. The business partnership form on the same API, feeding a different internal dashboard, was not.",
+    "link": "https://blog.saleheddinetouil.tech/posts/bugbounty-partnership-form-blind-xss-second-backoffice/",
+    "slug": "bugbounty-partnership-form-blind-xss-second-backoffice",
+    "image": "https://blog.saleheddinetouil.tech/covers/bugbounty-partnership-form-blind-xss-second-backoffice.jpg",
+    "date": "5 Sept 2026"
+  },
+  {
+    "title": "Push Notifications for an Account That Wasn't Mine",
+    "description": "A notification API authenticated every request, then took the account to act on from a field in the JSON body.",
+    "link": "https://blog.saleheddinetouil.tech/posts/bugbounty-notification-device-hijack-client-member-field/",
+    "slug": "bugbounty-notification-device-hijack-client-member-field",
+    "image": "https://blog.saleheddinetouil.tech/covers/bugbounty-notification-device-hijack-client-member-field.jpg",
+    "date": "4 Sept 2026"
+  }
+]

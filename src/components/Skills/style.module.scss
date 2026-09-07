@@ -62,9 +62,15 @@
   }
 
   .achievementsGrid, .soloGrid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 20px;
+
+    > * {
+      flex: 1 1 200px;
+      max-width: 300px;
+    }
   }
 
   .soloGrid {
@@ -173,9 +179,15 @@
   }
 
   .badgeGrid {
-    display: grid;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 12px;
+
+    > * {
+      flex: 1 1 150px;
+      max-width: 220px;
+    }
   }
 
   .badgeCard {
@@ -221,9 +233,15 @@
   }
 
   .skillsGrid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 24px;
+
+    > * {
+      flex: 1 1 220px;
+      max-width: 340px;
+    }
   }
 
   .skillCard {
@@ -288,9 +306,15 @@
   }
 
   .certGrid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 16px;
+
+    > * {
+      flex: 1 1 280px;
+      max-width: 420px;
+    }
   }
 
   .certCard {
@@ -369,16 +393,16 @@
     }
 
     .achievementsGrid {
-      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      > * { flex: 1 1 180px; }
       gap: 16px;
     }
 
     .skillsGrid {
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      > * { flex: 1 1 200px; }
     }
 
     .certGrid {
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      > * { flex: 1 1 250px; }
     }
 
     .badgePanel {
@@ -399,18 +423,18 @@
     }
 
     .achievementsGrid {
-      grid-template-columns: repeat(2, 1fr);
       gap: 12px;
+      > * { flex: 1 1 calc(50% - 6px); max-width: none; }
     }
 
     .skillsGrid {
-      grid-template-columns: 1fr;
+      > * { flex: 1 1 100%; max-width: 100%; }
       gap: 16px;
     }
 
     .certGrid {
-      grid-template-columns: 1fr;
       gap: 12px;
+      > * { flex: 1 1 100%; max-width: 100%; }
     }
 
     .badgePanel {
@@ -418,7 +442,7 @@
     }
 
     .badgeGrid {
-      grid-template-columns: repeat(2, minmax(0, 1fr));
+      > * { flex: 1 1 calc(50% - 6px); max-width: none; }
     }
 
     .achievementCard {
@@ -459,11 +483,11 @@
     }
 
     .achievementsGrid {
-      grid-template-columns: 1fr 1fr;
+      > * { flex: 1 1 calc(50% - 10px); max-width: none; }
     }
 
     .badgeGrid {
-      grid-template-columns: 1fr;
+      > * { flex: 1 1 100%; max-width: 100%; }
     }
 
     .badgeCard {

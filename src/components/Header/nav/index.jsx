@@ -28,6 +28,10 @@ const navItems = [
     href: "#projects",
   },
   {
+    title: "Blog",
+    href: "#blog",
+  },
+  {
     title: "Contact",
     href: "#contact",
   },

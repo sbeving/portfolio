@@ -9,6 +9,7 @@ import Description from '../components/Description';
 import Skills from '../components/Skills';
 import Experience from '../components/Experience';
 import SlidingImages from '../components/SlidingImages';
+import Blog from '../components/Blog';
 import Contact from '../components/Contact';
 
 export default function Home() {
@@ -60,6 +61,7 @@ export default function Home() {
       <Experience />
       <Projects />
       <SlidingImages />
+      <Blog />
       <Contact />
     </main>
   )

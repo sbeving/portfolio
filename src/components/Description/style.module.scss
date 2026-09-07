@@ -69,13 +69,16 @@
     }
 
     .methodGrid {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
       gap: 14px;
       max-width: 920px;
     }
 
     .methodCard {
+      flex: 1 1 240px;
+      max-width: 360px;
       min-height: 150px;
       padding: 22px;
       border-radius: 10px;
