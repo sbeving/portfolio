@@ -9,32 +9,43 @@ import Rounded from '../../common/RoundedButton';
 
 const projects = [
   {
-    title: "SOET Energy - Corporate Platform",
-    src: "soetenergy.jpg",
+    title: "Codivinity - Digital Agency Platform",
+    src: "codivinity.jpg",
+    url: "https://codivinity.com/en",
     color: "#0f3460",
     category: "Web Development • 2026",
-    description: "Multilingual corporate site for a battery-storage and EV-charging company: product catalogue, partner and news sections, built for performance and SEO. soetenergy.com"
+    description: "Multilingual site for a digital agency operating across Milan, Paris and Tunis: services, work, process and insights sections with light and dark themes"
   },
   {
     title: "DEREC Consulting - Engineering Firm Site",
     src: "derec-consulting.jpg",
+    url: "https://derec-consulting.saleheddinetouil.tech",
     color: "#16213e",
     category: "Web Development • 2026",
     description: "Bilingual site for an energy-transition engineering consultancy covering green hydrogen, battery storage and hybrid power, with an animated systems diagram and lead capture"
   },
   {
-    title: "Nextelog - Urban Logistics Platform",
-    src: "nextelog.jpg",
+    title: "SOET Energy - Corporate Platform",
+    src: "soetenergy.jpg",
+    url: "https://soetenergy.com",
     color: "#1a1a2e",
-    category: "Web Development • 2026",
-    description: "Italian/English site for a sustainable last-mile delivery service in Parma: booking and quote request flows, services and sustainability sections"
+    category: "Web Development • 2025",
+    description: "Multilingual corporate site for a battery-storage and EV-charging company: product catalogue, partner and news sections, built for performance and SEO"
   },
   {
     title: "Eat Box - Food Brand Site",
     src: "eatbox.jpg",
     color: "#533483",
-    category: "Web Development • 2026",
+    category: "Web Development • 2025",
     description: "Brand site for a Tunisian catering box service with menu boxes, gallery, events and WhatsApp-based ordering"
+  },
+  {
+    title: "Nextelog - Urban Logistics Platform",
+    src: "nextelog.jpg",
+    url: "https://nextelog.com",
+    color: "#2d1b4e",
+    category: "Web Development • 2024",
+    description: "Italian/English site for a sustainable last-mile delivery service in Parma: booking and quote request flows, services and sustainability sections"
   },
   {
     title: "LogChat - AI Log Correlation Dashboard",
@@ -173,7 +184,7 @@ export default function Home() {
     <div className={styles.body}>
       {
         projects.map( (project, index) => {
-          return <Project index={index} title={project.title} category={project.category} manageModal={manageModal} key={index}/>
+          return <Project index={index} title={project.title} category={project.category} url={project.url} manageModal={manageModal} key={index}/>
         })
       }
     </div>
