@@ -41,6 +41,10 @@
   .circleContainer {
     background-color: transparent;
     position: relative;
+    // was driven by an animated height (50 -> 0); now fixed, and scaled
+    // on the compositor instead so scrolling does not re-run layout
+    height: 50px;
+    will-change: transform;
     margin-top: clamp(60px, 12vh, 100px);
 
     .circle {

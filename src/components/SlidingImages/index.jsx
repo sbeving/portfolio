@@ -6,26 +6,26 @@ import Image from 'next/image';
 const slider1 = [
     {
         color: "#1E293B",
-        src: "gallery/no1dea-ensit.png"
+        src: "gallery/no1dea-ensit.jpg"
     },
     {
         color: "#334155",
-        src: "gallery/no1dea-smu.png"
+        src: "gallery/no1dea-smu.jpg"
     },
     {
         color: "#0F172A",
-        src: "gallery/no1dea-isetcom2.png"
+        src: "gallery/no1dea-isetcom2.jpg"
     },
     {
         color: "#1E293B",
-        src: "gallery/round-table.jpeg"
+        src: "gallery/round-table.jpg"
     }
 ]
 
 const slider2 = [
     {
         color: "#334155",
-        src: "gallery/no1dea-tek-up.jpeg"
+        src: "gallery/no1dea-tek-up.jpg"
     },
     {
         color: "#0F172A",
@@ -37,7 +37,7 @@ const slider2 = [
     },
     {
         color: "#334155",
-        src: "gallery/me-securinets-finals.JPG"
+        src: "gallery/me-securinets-finals.jpg"
     }
 ]
 
@@ -51,17 +51,19 @@ export default function Index() {
 
     const x1 = useTransform(scrollYProgress, [0, 1], [0, 150])
     const x2 = useTransform(scrollYProgress, [0, 1], [0, -150])
-    const height = useTransform(scrollYProgress, [0, 0.9], [50, 0])
+    // scaleY instead of height: transforms are composited, height forces layout every frame
+    const scaleY = useTransform(scrollYProgress, [0, 0.9], [1, 0])
 
     return (
         <div ref={container} className={styles.slidingImages}>
-            <motion.div style={{x: x1}} className={styles.slider}>
+            <motion.div style={{x: x1, willChange: "transform"}} className={styles.slider}>
                     {
                         slider1.map( (project, index) => {
                             return <div key={index} className={styles.project} style={{backgroundColor: project.color}} >
                                 <div className={styles.imageContainer}>
                                     <Image 
                                     fill={true}
+                                    sizes="(max-width: 768px) 45vw, 22vw"
                                     alt={"image"}
                                     src={`/images/${project.src}`}/>
                                 </div>
@@ -69,13 +71,14 @@ export default function Index() {
                         })
                     }
                 </motion.div>
-                <motion.div style={{x: x2}} className={styles.slider}>
+                <motion.div style={{x: x2, willChange: "transform"}} className={styles.slider}>
                     {
                         slider2.map( (project, index) => {
                             return <div key={index} className={styles.project} style={{backgroundColor: project.color}} >
                                 <div key={index} className={styles.imageContainer}>
                                     <Image 
                                     fill={true}
+                                    sizes="(max-width: 768px) 45vw, 22vw"
                                     alt={"image"}
                                     src={`/images/${project.src}`}/>
                                 </div>
@@ -83,7 +86,7 @@ export default function Index() {
                         })
                     }
                 </motion.div>
-                <motion.div style={{height}} className={styles.circleContainer}>
+                <motion.div style={{scaleY, transformOrigin: "top"}} className={styles.circleContainer}>
                     <div className={styles.circle}></div>
                 </motion.div>
         </div>

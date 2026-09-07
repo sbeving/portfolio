@@ -14,7 +14,7 @@ export default function Index() {
     const y = useTransform(scrollYProgress, [0, 1], [-500, 0])
     const rotate = useTransform(scrollYProgress, [0, 1], [120, 90])
     return (
-        <motion.div id="contact" style={{y}} ref={container} className={styles.contact}>
+        <motion.div id="contact" style={{y, willChange: "transform"}} ref={container} className={styles.contact}>
             <div className={styles.body}>
                 <div className={styles.title}>
                     <span>
@@ -22,7 +22,8 @@ export default function Index() {
                             <Image 
                             fill={true}
                             alt={"profile"}
-                            src={`/images/me.JPG`}
+                            src={`/images/profile-avatar.jpg`}
+                            sizes="88px"
                             />
                         </div>
                         <h2>Let&apos;s build</h2>

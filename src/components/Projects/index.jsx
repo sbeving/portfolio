@@ -49,7 +49,7 @@ const projects = [
   },
   {
     title: "LogChat - AI Log Correlation Dashboard",
-    src: "logChat.png",
+    src: "logChat.jpg",
     color: "#1a1a2e",
     category: "Defense & Monitoring • 2025",
     description: "FastAPI + MongoDB real-time log ingestion with AI-powered threat detection, automated incident response, and natural language querying"
@@ -77,7 +77,7 @@ const projects = [
   },
   {
     title: "E-Books Platform (MERN Stack)",
-    src: "ebookscom.png",
+    src: "ebookscom.jpg",
     color: "#2d1b4e",
     category: "Full-Stack Development • 2024",
     description: "Complete e-commerce platform with MERN stack, Firebase Auth, Stripe payments, admin dashboard, inventory management"
@@ -98,21 +98,21 @@ const projects = [
   },
   {
     title: "AI Fitness & Nutrition App",
-    src: "ai-coach.png",
+    src: "ai-coach.jpg",
     color: "#0f3460",
     category: "Mobile Development • 2024",
     description: "Flutter cross-platform fitness app with AI Assistant, workout tracking, meal planning, progress analytics, and social features"
   },
   {
     title: "Petshouse.tn E-commerce Platform",
-    src: "petshouse.png",
+    src: "petshouse.jpg",
     color: "#533483",
     category: "Odoo Development • 2024",
     description: "Complete pet shop management with invoicing, inventory, CRM integration, SEO optimization (25% sales increase)"
   },
   {
     title: "Oussman4WD Automotive Website",
-    src: "oussman4wd.png",
+    src: "oussman4wd.jpg",
     color: "#2d1b4e",
     category: "Web Development • 2024",
     description: "Responsive automotive website with custom vehicle configurator, service booking, and integrated Google Maps"
