@@ -9,6 +9,34 @@ import Rounded from '../../common/RoundedButton';
 
 const projects = [
   {
+    title: "SOET Energy - Corporate Platform",
+    src: "soetenergy.jpg",
+    color: "#0f3460",
+    category: "Web Development • 2026",
+    description: "Multilingual corporate site for a battery-storage and EV-charging company: product catalogue, partner and news sections, built for performance and SEO. soetenergy.com"
+  },
+  {
+    title: "DEREC Consulting - Engineering Firm Site",
+    src: "derec-consulting.jpg",
+    color: "#16213e",
+    category: "Web Development • 2026",
+    description: "Bilingual site for an energy-transition engineering consultancy covering green hydrogen, battery storage and hybrid power, with an animated systems diagram and lead capture"
+  },
+  {
+    title: "Nextelog - Urban Logistics Platform",
+    src: "nextelog.jpg",
+    color: "#1a1a2e",
+    category: "Web Development • 2026",
+    description: "Italian/English site for a sustainable last-mile delivery service in Parma: booking and quote request flows, services and sustainability sections"
+  },
+  {
+    title: "Eat Box - Food Brand Site",
+    src: "eatbox.jpg",
+    color: "#533483",
+    category: "Web Development • 2026",
+    description: "Brand site for a Tunisian catering box service with menu boxes, gallery, events and WhatsApp-based ordering"
+  },
+  {
     title: "LogChat - AI Log Correlation Dashboard",
     src: "logChat.png",
     color: "#1a1a2e",
