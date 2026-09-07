@@ -11,10 +11,14 @@ export default function Index() {
         target: container,
         offset: ["start end", "end end"]
     })
-    const y = useTransform(scrollYProgress, [0, 1], [-500, 0])
-    const rotate = useTransform(scrollYProgress, [0, 1], [120, 90])
+    const rotate = useTransform(scrollYProgress, [0, 0.45], [120, 90])
     return (
-        <motion.div id="contact" style={{y, willChange: "transform"}} ref={container} className={styles.contact}>
+        // No translate on this section. It used to slide up over the gallery, but
+        // useScroll measured this same element and getBoundingClientRect() includes
+        // transforms, so the value fed back into its own input and settled instead of
+        // animating - leaving a permanent overlap (-74px desktop, -359px mobile).
+        // The arrow rotation below still tracks scroll; it affects nothing's layout.
+        <div id="contact" ref={container} className={styles.contact}>
             <div className={styles.body}>
                 <div className={styles.title}>
                     <span>
@@ -97,6 +101,6 @@ export default function Index() {
                     </div>
                 </div>
             </div>
-        </motion.div>
+        </div>
     )
 }

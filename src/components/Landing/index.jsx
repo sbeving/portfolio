@@ -69,10 +69,6 @@ export default function Home() {
   return (
     <motion.main id="home" variants={slideUp} initial="initial" animate="enter" className={styles.landing}>
       <section className={styles.heroPanel} aria-label="Portfolio introduction">
-        <div className={styles.kicker}>
-          <span className={styles.statusDot}></span>
-          Available for application security roles and collaborations
-        </div>
         <h1>Saleh Eddine Touil</h1>
         <p className={styles.lede}>
           Part-time bug bounty hunter turning recon, access-control testing, and exploit chaining into validated security impact.

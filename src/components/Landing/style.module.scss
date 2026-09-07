@@ -47,29 +47,6 @@
     margin-left: clamp(24px, 7vw, 112px);
     margin-top: clamp(56px, 10vh, 96px);
 
-    .kicker {
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      color: #d4d4d8;
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 12px;
-      line-height: 1.4;
-      padding: 8px 12px;
-      border: 1px solid rgba(255, 255, 255, 0.1);
-      background: rgba(9, 9, 11, 0.72);
-      backdrop-filter: blur(10px);
-      border-radius: 999px;
-    }
-
-    .statusDot {
-      width: 8px;
-      height: 8px;
-      border-radius: 999px;
-      background: #22c55e;
-      box-shadow: 0 0 18px rgba(34, 197, 94, 0.55);
-    }
-
     h1 {
       margin: 24px 0 0;
       color: #fafafa;
@@ -92,42 +69,6 @@
       font-weight: 500;
     }
 
-    .actions {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-      margin-top: 30px;
-
-      a {
-        min-height: 46px;
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        color: #09090b;
-        background: #fafafa;
-        text-decoration: none;
-        font-weight: 700;
-        font-size: 14px;
-        padding: 0 18px;
-        border-radius: 8px;
-        transition: transform 0.2s ease, background 0.2s ease, color 0.2s ease;
-
-        &:hover {
-          transform: translateY(-2px);
-          background: #a7f3d0;
-        }
-
-        &:nth-child(2) {
-          color: #fafafa;
-          background: rgba(255, 255, 255, 0.06);
-          border: 1px solid rgba(255, 255, 255, 0.12);
-
-          &:hover {
-            background: rgba(255, 255, 255, 0.11);
-          }
-        }
-      }
-    }
   }
 
   .sliderContainer {
@@ -237,16 +178,13 @@
   // Mobile
   @media (max-width: 768px) {
     height: 100svh; /* Small viewport height - excludes address bar */
-    min-height: 820px; /* room for proof board and CTAs */
+    /* the 820px minimum here was reserving room for the proof board and the
+       CTA buttons; both are gone, and it was forcing a very tall hero */
     
     .heroPanel {
       width: calc(100% - 40px);
       max-width: calc(100vw - 40px);
       margin: 82px 20px 0;
-
-      .kicker {
-        border-radius: 8px;
-      }
 
       h1 {
         font-size: clamp(42px, 13vw, 62px);
@@ -291,10 +229,6 @@
       max-width: calc(100vw - 32px);
       margin-left: 16px;
       margin-right: 16px;
-    }
-
-    .heroPanel .actions a {
-      flex: 1 1 100%;
     }
 
     .slider p {
