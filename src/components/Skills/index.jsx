@@ -65,13 +65,9 @@ const certifications = [
     badgeUrl: "https://media.licdn.com/dms/image/v2/D4D2DAQFfBrjUQpWINA/profile-treasury-image-shrink_800_800/B4DZ0gxD2oIoAc-/0/1774371227380?e=1779883200&v=beta&t=I9_sIdlcrQp5D2Egln2EbvcqDi1c7sM043Jk3MFZ4Ew",
     certificateUrl: "/toeic.jpeg"
   },
-  { name: "Certified Cybersecurity Educator Professional (CCEP)", issuer: "Red Team Leaders", year: "2025" },
   { name: "CCNA: Enterprise Networking, Security, and Automation", issuer: "Cisco", year: "2025" },
+  { name: "CCNA: Switching, Routing, and Wireless Essentials", issuer: "Cisco", year: "2025" },
   { name: "CCNA: Introduction to Networks", issuer: "Cisco", year: "2025" },
-  { name: "API Security Fundamentals", issuer: "APIsec University", year: "2025" },
-  { name: "Prompt Engineering Foundation Learner", issuer: "Certiprof", year: "2025" },
-  { name: "LFS183: Introduction to Zero Trust", issuer: "The Linux Foundation", year: "2025" },
-  { name: "LFS158: Introduction to Kubernetes", issuer: "The Linux Foundation", year: "2025" },
   { name: "Cybersecurity Fundamentals", issuer: "IBM", year: "2025" }
 ];
 

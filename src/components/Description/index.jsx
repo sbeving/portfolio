@@ -27,7 +27,7 @@ export default function Index() {
                     <br/><br/>
                     <strong>Current focus:</strong> Bug bounty methodology • Web & API Security • BOLA/IDOR • JWT and auth bypasses • GraphQL attack surface • Secure AI Integration
                     <br/><br/>
-                    <strong>Certifications:</strong> HTB Certified Penetration Testing Specialist (CPTS) • CCNA Enterprise Networking • API Security Fundamentals • Zero Trust • Kubernetes • Cybersecurity Fundamentals
+                    <strong>Certifications:</strong> HTB Certified Penetration Testing Specialist (CPTS) • CCNA (Introduction to Networks, Switching Routing &amp; Wireless Essentials, Enterprise Networking Security &amp; Automation) • Cybersecurity Fundamentals
                 </motion.p>
                 <motion.div className={styles.methodGrid} variants={opacity} animate={isInView ? "open" : "closed"}>
                     {methods.map((item) => (
