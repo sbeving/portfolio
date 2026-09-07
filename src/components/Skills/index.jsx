@@ -38,24 +38,16 @@ const skills = [
   }
 ];
 
-const bugBountyMilestones = [
-  { title: "Part-time", event: "Intigriti Hunter", note: "Active since Jan 2026" },
-  { title: "Low-Exceptional", event: "Accepted reports", note: "Web and API impact range" },
-  { title: "VDP", event: "Digital Flanders", note: "Improper access control confirmed via YesWeHack" },
-  { title: "Research Loop", event: "Duplicates to variants", note: "Variant hunting, impact refinement, better recon" }
-];
-
 const teamAchievements = [
-  { title: "1st Place", event: "Institut français de Tunisie CTF", note: "Team Shadows" },
-  { title: "1st Place", event: "Darkest Hour CTF", note: "Team no!dea" },
-  { title: "1st Place", event: "Darkest Hour CTF Eclipse Edition", note: "Team no!dea" },
+  { title: "1st Place", event: "GCUP v2 CTF", note: "Second consecutive win - Institut français de Tunisie, organized by Securinets" },
+  { title: "1st Place", event: "GCUP v1 CTF", note: "Institut français de Tunisie, first edition" },
+  { title: "1st Place", event: "Darkest Hour CTF", note: "Securinets INSAT" },
+  { title: "1st Place", event: "Darkest Hour CTF Eclipse Edition", note: "Securinets INSAT" },
   { title: "1st Place", event: "DarkNets 3.0 CTF", note: "National Competition 2025" },
-  { title: "1st Place", event: "Cr4ck0ut 2.0 CTF", note: "National Competition" },
-  { title: "Top 8", event: "Securinets INSAT International", note: "Among 600+ teams" },
-];
-
-const soloAchievements = [
-  { title: "#157", event: "PatriotCTF 2025", note: "Out of 1300+ Solo" }
+  { title: "1st Place", event: "Cr4ck0ut 2.0 CTF", note: "Securinets SMU" },
+  { title: "2nd Place", event: "CTF KAREEM", note: "Securinets TEK-UP - 11 first bloods" },
+  { title: "2nd Place", event: "Cybermaze CTF", note: "Engineers Spark - ISET'COM" },
+  { title: "Top 8", event: "Securinets INSAT International Finals", note: "Among 600+ teams, MENA and beyond" },
 ];
 
 const certifications = [
@@ -90,32 +82,6 @@ export default function Skills() {
   return (
     <div id="skills" ref={container} className={styles.skills}>
       <div className={styles.body}>
-        {/* Bug bounty section */}
-        <motion.div
-          className={styles.achievementsSection}
-          initial={{ opacity: 0, y: 50 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.8 }}
-        >
-          <h2>Bug Bounty Focus</h2>
-          <p className={styles.teamBadge}>Intigriti - Web, API, auth, access control, and exploit chaining</p>
-          <div className={styles.achievementsGrid}>
-            {bugBountyMilestones.map((achievement, index) => (
-              <motion.div
-                key={index}
-                className={styles.achievementCard}
-                initial={{ opacity: 0, y: 20 }}
-                animate={isInView ? { opacity: 1, y: 0 } : {}}
-                transition={{ duration: 0.5, delay: index * 0.08 }}
-              >
-                <h3>{achievement.title}</h3>
-                <p className={styles.eventName}>{achievement.event}</p>
-                <span className={styles.eventNote}>{achievement.note}</span>
-              </motion.div>
-            ))}
-          </div>
-        </motion.div>
-
         {/* CTF achievements section */}
         <motion.div 
           className={styles.achievementsSection}
@@ -133,23 +99,6 @@ export default function Skills() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={isInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.5, delay: index * 0.08 }}
-              >
-                <h3>{achievement.title}</h3>
-                <p className={styles.eventName}>{achievement.event}</p>
-                <span className={styles.eventNote}>{achievement.note}</span>
-              </motion.div>
-            ))}
-          </div>
-          
-          <h4 className={styles.soloHeader}>Solo Competitions</h4>
-          <div className={styles.soloGrid}>
-            {soloAchievements.map((achievement, index) => (
-              <motion.div
-                key={index}
-                className={styles.achievementCard}
-                initial={{ opacity: 0, y: 20 }}
-                animate={isInView ? { opacity: 1, y: 0 } : {}}
-                transition={{ duration: 0.5, delay: 0.6 }}
               >
                 <h3>{achievement.title}</h3>
                 <p className={styles.eventName}>{achievement.event}</p>
