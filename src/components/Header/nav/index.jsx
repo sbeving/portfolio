@@ -16,6 +16,10 @@ const navItems = [
     href: "#about",
   },
   {
+    title: "Blog",
+    href: "#blog",
+  },
+  {
     title: "Skills",
     href: "#skills",
   },
@@ -26,10 +30,6 @@ const navItems = [
   {
     title: "Projects",
     href: "#projects",
-  },
-  {
-    title: "Blog",
-    href: "#blog",
   },
   {
     title: "Contact",

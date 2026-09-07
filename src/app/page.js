@@ -57,11 +57,11 @@ export default function Home() {
       </AnimatePresence>
       <Landing />
       <Description />
+      <Blog />
       <Skills />
       <Experience />
       <Projects />
       <SlidingImages />
-      <Blog />
       <Contact />
     </main>
   )
