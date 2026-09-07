@@ -66,13 +66,6 @@ export default function Home() {
     };
   }, []);
 
-  const proofPoints = [
-    { label: 'Platform', value: 'Intigriti' },
-    { label: 'Reports', value: '30+ valid' },
-    { label: 'Impact', value: 'Low - Exceptional' },
-    { label: 'Cert', value: 'CPTS' }
-  ];
-
   return (
     <motion.main id="home" variants={slideUp} initial="initial" animate="enter" className={styles.landing}>
       <section className={styles.heroPanel} aria-label="Portfolio introduction">
@@ -84,34 +77,12 @@ export default function Home() {
         <p className={styles.lede}>
           Part-time bug bounty hunter turning recon, access-control testing, and exploit chaining into validated security impact.
         </p>
-        <div className={styles.actions}>
-          <a href="https://app.intigriti.com/profile/sbeve" target="_blank" rel="noopener noreferrer">View Intigriti</a>
-          <a href="/cv.pdf" target="_blank" rel="noopener noreferrer">Open CV</a>
-        </div>
       </section>
-      <aside className={styles.signalBoard} aria-label="Security proof points">
-        <div className={styles.signalHeader}>
-          <span>researcher.signal</span>
-          <span>live</span>
-        </div>
-        <div className={styles.signalGrid}>
-          {proofPoints.map((point) => (
-            <div className={styles.signalItem} key={point.label}>
-              <span>{point.label}</span>
-              <strong>{point.value}</strong>
-            </div>
-          ))}
-        </div>
-      </aside>
       <div className={styles.sliderContainer}>
         <div ref={slider} className={styles.slider}>
           <p ref={firstText}>RECON • ACCESS CONTROL • AUTH LOGIC • API SECURITY —</p>
           <p ref={secondText}>RECON • ACCESS CONTROL • AUTH LOGIC • API SECURITY —</p>
         </div>
-      </div>
-      <div data-scroll data-scroll-speed={0.1} className={styles.description}>
-        <p>Part-time bug bounty hunter</p>
-        <p>Web & API Security • IDOR/BOLA • Auth Logic • Recon</p>
       </div>
     </motion.main>
   )
