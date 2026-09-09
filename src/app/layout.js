@@ -12,11 +12,8 @@ export const metadata = {
   alternates: {
     canonical: '/',
   },
-  icons: {
-    icon: '/favicon.svg',
-    shortcut: '/favicon.svg',
-    apple: '/favicon.svg',
-  },
+  // Icons are provided by the App Router file conventions:
+  // src/app/favicon.ico, src/app/icon.png and src/app/apple-icon.png.
   openGraph: {
     title: 'Saleh Eddine Touil | Bug Bounty Hunter & CPTS',
     description: 'Part-time bug bounty hunter. Web and API security, access control, authentication logic, recon and exploit chaining. CPTS certified.',
