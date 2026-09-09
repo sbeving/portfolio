@@ -1,223 +1,173 @@
 'use client';
 import styles from './style.module.scss'
-import { useState, useEffect, useRef } from 'react';
-import Project from './components/project';
-import { motion } from 'framer-motion';
-import gsap from 'gsap';
-import Image from 'next/image';
+import { useRef } from 'react';
+import { motion, useInView } from 'framer-motion';
+import ProjectCard from './components/project';
 import Rounded from '../../common/RoundedButton';
 
+// Built products only — client sites, full-stack apps and interfaces, each with a
+// live screenshot and (where it's on a domain we control) a live `url`.
 const projects = [
   {
-    title: "Codivinity - Digital Agency Platform",
+    title: "Codivinity",
+    subtitle: "Digital Agency Platform",
     src: "codivinity.jpg",
     url: "https://codivinity.com/en",
-    color: "#0f3460",
-    category: "Web Development • 2026",
-    description: "Multilingual site for a digital agency operating across Milan, Paris and Tunis: services, work, process and insights sections with light and dark themes"
+    type: "Web",
+    year: "2026",
+    tags: ["Next.js", "i18n", "Framer Motion"],
+    description: "Multilingual site for a digital agency across Milan, Paris and Tunis — services, work, process and insights, with light and dark themes."
   },
   {
-    title: "DEREC Consulting - Engineering Firm Site",
+    title: "DEREC Consulting",
+    subtitle: "Engineering Firm Site",
     src: "derec-consulting.jpg",
     url: "https://derec-consulting.saleheddinetouil.tech",
-    color: "#16213e",
-    category: "Web Development • 2026",
-    description: "Bilingual site for an energy-transition engineering consultancy covering green hydrogen, battery storage and hybrid power, with an animated systems diagram and lead capture"
+    type: "Web",
+    year: "2026",
+    tags: ["React", "Bilingual", "Lead Capture"],
+    description: "Site for an energy-transition consultancy covering green hydrogen, battery storage and hybrid power, with an animated systems diagram."
   },
   {
-    title: "SOET Energy - Corporate Platform",
+    title: "SOET Energy",
+    subtitle: "Corporate Platform",
     src: "soetenergy.jpg",
     url: "https://soetenergy.com",
-    color: "#1a1a2e",
-    category: "Web Development • 2025",
-    description: "Multilingual corporate site for a battery-storage and EV-charging company: product catalogue, partner and news sections, built for performance and SEO"
+    type: "Web",
+    year: "2025",
+    tags: ["Multilingual", "SEO", "Performance"],
+    description: "Corporate site for a battery-storage and EV-charging company — product catalogue, partner and news sections, tuned for speed and SEO."
   },
   {
-    title: "Eat Box - Food Brand Site",
+    title: "Eat Box",
+    subtitle: "Food Brand Site",
     src: "eatbox.jpg",
-    color: "#533483",
-    category: "Web Development • 2025",
-    description: "Brand site for a Tunisian catering box service with menu boxes, gallery, events and WhatsApp-based ordering"
+    type: "Web",
+    year: "2025",
+    tags: ["Brand Site", "Gallery", "WhatsApp Orders"],
+    description: "Brand site for a Tunisian catering box service — menu boxes, gallery, events and WhatsApp-based ordering."
   },
   {
-    title: "Nextelog - Urban Logistics Platform",
+    title: "Nextelog",
+    subtitle: "Urban Logistics Platform",
     src: "nextelog.jpg",
     url: "https://nextelog.com",
-    color: "#2d1b4e",
-    category: "Web Development • 2024",
-    description: "Italian/English site for a sustainable last-mile delivery service in Parma: booking and quote request flows, services and sustainability sections"
+    type: "Web",
+    year: "2024",
+    tags: ["Next.js", "i18n", "Booking Flow"],
+    description: "IT/EN site for a sustainable last-mile delivery service in Parma — booking and quote flows, services and sustainability sections."
   },
   {
-    title: "LogChat - AI Log Correlation Dashboard",
+    title: "LogChat",
+    subtitle: "AI Log Correlation Dashboard",
     src: "logChat.jpg",
-    color: "#1a1a2e",
-    category: "Defense & Monitoring • 2025",
-    description: "FastAPI + MongoDB real-time log ingestion with AI-powered threat detection, automated incident response, and natural language querying"
+    type: "Product",
+    year: "2025",
+    tags: ["FastAPI", "MongoDB", "AI Detection"],
+    description: "Real-time log ingestion dashboard with AI-powered detection, automated response, and natural-language querying."
   },
   {
-    title: "GoReconX - OSINT & Reconnaissance Tool",
-    src: "",
-    category: "Offense & Reconnaissance • 2025",
-    color: "#16213e",
-    description: "Go-based automated recon tool with subdomain enumeration, port scanning, service fingerprinting, and comprehensive reporting"
-  },
-  {
-    title: "AI-Powered E-commerce Security Integration",
-    src: "",
-    color: "#0f3460",
-    category: "AI Integration & Security • 2025 (Megapc)",
-    description: "Deepseek-R1 chatbot, intelligent PC builder, n8n workflow automation, OAuth 2.0 API gateway hardening, JWT microservices security"
-  },
-  {
-    title: "Security Hardening & Automation Suite",
-    src: "",
-    color: "#533483",
-    category: "Security Engineering • 2025 (Megapc)",
-    description: "Backoffice hardening against broken auth, exposed APIs, privilege escalation. Automated security workflows reducing manual tasks"
-  },
-  {
-    title: "E-Books Platform (MERN Stack)",
+    title: "E-Books Platform",
+    subtitle: "MERN Marketplace",
     src: "ebookscom.jpg",
-    color: "#2d1b4e",
-    category: "Full-Stack Development • 2024",
-    description: "Complete e-commerce platform with MERN stack, Firebase Auth, Stripe payments, admin dashboard, inventory management"
+    type: "Full-Stack",
+    year: "2024",
+    tags: ["MERN", "Stripe", "Firebase Auth"],
+    description: "Full e-commerce platform — Firebase Auth, Stripe payments, admin dashboard and inventory management."
   },
   {
-    title: "C2S Enterprise Backoffice",
-    src: "",
-    color: "#1a1a2e",
-    category: "Enterprise Application • 2024",
-    description: "Full-stack Angular + .NET application with role-based access control (RBAC), encrypted data handling, and audit logging"
-  },
-  {
-    title: "ACS Quality Management System",
-    src: "",
-    color: "#16213e",
-    category: "Enterprise Solution • 2024",
-    description: "Angular + Spring Boot quality management system with document control, compliance tracking, and reporting dashboard"
-  },
-  {
-    title: "AI Fitness & Nutrition App",
+    title: "AI Fitness & Nutrition",
+    subtitle: "Cross-Platform App",
     src: "ai-coach.jpg",
-    color: "#0f3460",
-    category: "Mobile Development • 2024",
-    description: "Flutter cross-platform fitness app with AI Assistant, workout tracking, meal planning, progress analytics, and social features"
+    type: "Mobile",
+    year: "2024",
+    tags: ["Flutter", "AI Assistant", "Analytics"],
+    description: "Flutter fitness app with an AI assistant, workout tracking, meal planning, progress analytics and social features."
   },
   {
-    title: "Petshouse.tn E-commerce Platform",
+    title: "Petshouse.tn",
+    subtitle: "E-commerce Platform",
     src: "petshouse.jpg",
-    color: "#533483",
-    category: "Odoo Development • 2024",
-    description: "Complete pet shop management with invoicing, inventory, CRM integration, SEO optimization (25% sales increase)"
+    type: "Web",
+    year: "2024",
+    tags: ["Odoo", "CRM", "SEO"],
+    description: "Pet-shop management with invoicing, inventory and CRM — SEO work that lifted sales by ~25%."
   },
   {
-    title: "Oussman4WD Automotive Website",
+    title: "Oussman4WD",
+    subtitle: "Automotive Website",
     src: "oussman4wd.jpg",
-    color: "#2d1b4e",
-    category: "Web Development • 2024",
-    description: "Responsive automotive website with custom vehicle configurator, service booking, and integrated Google Maps"
-  },
-  {
-    title: "Snort IDS Lab Environment",
-    src: "",
-    color: "#2d1b4e",
-    category: "Network Security • 2023",
-    description: "Intrusion Detection System lab with custom rule creation, packet analysis, alert correlation, and threat hunting exercises"
-  },
-  {
-    title: "OpenSSL PKI Infrastructure Lab",
-    src: "",
-    color: "#1a1a2e",
-    category: "Cryptography & PKI • 2023",
-    description: "Complete PKI implementation with CA hierarchy, certificate lifecycle management, CRL distribution, and OCSP responder"
+    type: "Web",
+    year: "2024",
+    tags: ["Configurator", "Booking", "Maps"],
+    description: "Responsive automotive site with a custom vehicle configurator, service booking and integrated Google Maps."
   }
 ]
 
-const scaleAnimation = {
-    initial: {scale: 0, x:"-50%", y:"-50%"},
-    enter: {scale: 1, x:"-50%", y:"-50%", transition: {duration: 0.4, ease: [0.76, 0, 0.24, 1]}},
-    closed: {scale: 0, x:"-50%", y:"-50%", transition: {duration: 0.4, ease: [0.32, 0, 0.67, 0]}}
-}
+const gridContainer = {
+  hidden: {},
+  show: { transition: { staggerChildren: 0.06 } }
+};
 
-export default function Home() {
-
-  const [modal, setModal] = useState({active: false, index: 0})
-  const { active, index } = modal;
-  const modalContainer = useRef(null);
-  const cursor = useRef(null);
-  const cursorLabel = useRef(null);
-
-  let xMoveContainer = useRef(null);
-  let yMoveContainer = useRef(null);
-  let xMoveCursor = useRef(null);
-  let yMoveCursor = useRef(null);
-  let xMoveCursorLabel = useRef(null);
-  let yMoveCursorLabel = useRef(null);
-
-  useEffect( () => {
-    //Move Container
-    xMoveContainer.current = gsap.quickTo(modalContainer.current, "left", {duration: 0.8, ease: "power3"})
-    yMoveContainer.current = gsap.quickTo(modalContainer.current, "top", {duration: 0.8, ease: "power3"})
-    //Move cursor
-    xMoveCursor.current = gsap.quickTo(cursor.current, "left", {duration: 0.5, ease: "power3"})
-    yMoveCursor.current = gsap.quickTo(cursor.current, "top", {duration: 0.5, ease: "power3"})
-    //Move cursor label
-    xMoveCursorLabel.current = gsap.quickTo(cursorLabel.current, "left", {duration: 0.45, ease: "power3"})
-    yMoveCursorLabel.current = gsap.quickTo(cursorLabel.current, "top", {duration: 0.45, ease: "power3"})
-  }, [])
-
-  const moveItems = (x, y) => {
-    xMoveContainer.current(x)
-    yMoveContainer.current(y)
-    xMoveCursor.current(x)
-    yMoveCursor.current(y)
-    xMoveCursorLabel.current(x)
-    yMoveCursorLabel.current(y)
-  }
-  const manageModal = (active, index, x, y) => {
-    moveItems(x, y)
-    setModal({active, index})
-  }
+export default function Projects() {
+  const header = useRef(null);
+  const inView = useInView(header, { once: true, margin: "-80px" });
 
   return (
-  <main id="projects" onMouseMove={(e) => {moveItems(e.clientX, e.clientY)}} className={styles.projects}>
-    <div className={styles.body}>
-      {
-        projects.map( (project, index) => {
-          return <Project index={index} title={project.title} category={project.category} url={project.url} manageModal={manageModal} key={index}/>
-        })
-      }
-    </div>
-    <Rounded>
-      <p>More work</p>
-    </Rounded>
-    <>
-        <motion.div ref={modalContainer} variants={scaleAnimation} initial="initial" animate={active ? "enter" : "closed"} className={styles.modalContainer}>
-            <div style={{top: index * -100 + "%"}} className={styles.modalSlider}>
-            {
-                projects.map( (project, index) => {
-                const { src, color, description } = project
-                return <div className={styles.modal} style={{backgroundColor: color}} key={`modal_${index}`}>
-                    {src ? (
-                      <Image 
-                        src={`/images/${src}`}
-                        width={300}
-                        height={0}
-                        alt="image"
-                      />
-                    ) : (
-                      <div className={styles.modalDescription}>
-                        <p>{description}</p>
-                      </div>
-                    )}
-                </div>
-                })
-            }
-            </div>
+    <section id="projects" className={styles.projects}>
+      <div className={styles.inner}>
+        <header ref={header} className={styles.head}>
+          <motion.span
+            className={styles.eyebrow}
+            initial={{ opacity: 0, y: 12 }}
+            animate={inView ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
+          >
+            Selected Work
+          </motion.span>
+          <motion.h2
+            initial={{ opacity: 0, y: 20 }}
+            animate={inView ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1], delay: 0.05 }}
+          >
+            Things I&apos;ve shipped
+          </motion.h2>
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={inView ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1], delay: 0.1 }}
+          >
+            Client sites, full-stack products and interfaces I&apos;ve designed and built —
+            {' '}{projects.length} projects across web, product and mobile.
+          </motion.p>
+        </header>
+
+        <motion.div
+          className={styles.grid}
+          variants={gridContainer}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true, margin: "-10%" }}
+        >
+          {projects.map((project) => (
+            <ProjectCard key={project.title} project={project} />
+          ))}
         </motion.div>
-        <motion.div ref={cursor} className={styles.cursor} variants={scaleAnimation} initial="initial" animate={active ? "enter" : "closed"}></motion.div>
-        <motion.div ref={cursorLabel} className={styles.cursorLabel} variants={scaleAnimation} initial="initial" animate={active ? "enter" : "closed"}>View</motion.div>
-    </>
-  </main>
+
+        <div className={styles.footer}>
+          <a
+            href="https://github.com/sbeving"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={styles.ctaLink}
+            aria-label="See more work on GitHub"
+          >
+            <Rounded backgroundColor="#22c55e">
+              <p>More on GitHub</p>
+            </Rounded>
+          </a>
+        </div>
+      </div>
+    </section>
   )
 }
